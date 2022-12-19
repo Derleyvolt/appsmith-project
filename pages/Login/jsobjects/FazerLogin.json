@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "FazerLogin",
+    "pageId": "Login",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Login_FazerLogin",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63a085904f35af560dc13a60"
+}
