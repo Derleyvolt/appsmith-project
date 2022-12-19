@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Login",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tGoToCadastro: () => {\n\t\tnavigateTo(\"Cadastro\")\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Login_JSObject1",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639b4656749a014ec6e5243e"
+}

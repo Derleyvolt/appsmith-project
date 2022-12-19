@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "SaveTable",
+    "pageId": "Tabela",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tAddNewRow: () => {\n\t\t\tif(Table1.isAddRowInProgress == true) {\n\t\t\t\t\tJS_InsertRow.insert_row_in_table(Table1.newRow)\n\t\t\t}\n\t},\n\tTeste: () => {\n\t\t\t\n\t\t\tfor(var idx of Table1.tableData) {\n\t\t\t\t\tshowAlert(idx.id)\n\t\t\t}\n\t},\n\t\n\tClearTable: () => {\n\t\t\tstoreValue(\"dt\", [])\t\t\t\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Tabela_SaveTable",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639ac63303959a6b55a239b9"
+}

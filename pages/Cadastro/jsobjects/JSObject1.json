@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Cadastro",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tCreateAccount: async (userData) => {\n\t\t\tawait storeValue(\"userData\", [...(appsmith.store.userData||[]), userData])\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Cadastro_JSObject1",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639b66844f35af560dc0f918"
+}

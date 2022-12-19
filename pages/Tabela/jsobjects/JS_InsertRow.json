@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "JS_InsertRow",
+    "pageId": "Tabela",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tinsert_row_in_table: (row_data) => {\n\t\t\tlet table = appsmith.store.dt;\n\t\t\ttable.push(row_data)\n\t\t\tstoreValue(\"dt\", table)\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Tabela_JS_InsertRow",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639acc1f5b4b533c8eaa7fe1"
+}
