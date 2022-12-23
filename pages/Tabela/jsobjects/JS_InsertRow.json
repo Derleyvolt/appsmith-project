@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tinsert_row_in_table: (row_data) => {\n\t\t\tlet table = appsmith.store.dt;\n\t\t\ttable.push(row_data)\n\t\t\tstoreValue(\"dt\", table)\n\t}\n}",
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tinsert_row_in_table: (row_data) => {\n\t\t\tlet table = appsmith.store.dt;\n\t\t\ttable.push(row_data)\n\t\t\tstoreValue(\"dt\", table)\n\t    return \"Sucess\"\n\t}\n}",
     "variables": [
       {
         "name": "myVar1",
