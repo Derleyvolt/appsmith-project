@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "myFun2",
-    "fullyQualifiedName": "MakeLogin.myFun2",
+    "fullyQualifiedName": "DoLogin.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Login",
-    "collectionId": "Login_MakeLogin",
+    "collectionId": "Login_DoLogin",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -45,7 +45,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login_MakeLogin.myFun2",
+  "id": "Login_DoLogin.myFun2",
   "deleted": false,
   "gitSyncId": "637d55b1cbb10813d213d9ed_639b66197b3ff97723bea967"
 }
