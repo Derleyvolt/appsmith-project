@@ -118,7 +118,7 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "Button1",
-                      "onClick": "{{navigateTo('Tabela', {}, 'SAME_WINDOW')}}",
+                      "onClick": "{{JSObject1.GoToCadastro()}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -271,7 +271,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 23,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "derley",
                       "minDynamicHeight": 4
                     },
                     {
@@ -303,9 +303,6 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "validation"
                         }
                       ],
                       "labelPosition": "Top",
@@ -313,7 +310,7 @@
                       "inputType": "PASSWORD",
                       "isDisabled": false,
                       "key": "9gp3aqj600",
-                      "validation": "{{Input2.text.length >= 8}}",
+                      "validation": "",
                       "labelTextSize": "0.875rem",
                       "isRequired": true,
                       "isDeprecated": false,
@@ -335,7 +332,7 @@
                       "originalBottomRow": 31,
                       "isSpellCheck": false,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "123",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -369,7 +366,22 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Login_Initialize.myFun2",
+              "name": "Initialize.myFun2",
+              "collectionId": "Login_Initialize",
+              "clientSideExecution": true,
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  await storeValue(\"userdata\", {\n    'username': '',\n    'password': ''\n  });\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Login",

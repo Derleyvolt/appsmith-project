@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "myFun2",
-    "fullyQualifiedName": "DoLogin.myFun2",
+    "fullyQualifiedName": "Initialize.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,20 +14,17 @@
       "userPermissions": []
     },
     "pageId": "Login",
-    "collectionId": "Login_DoLogin",
+    "collectionId": "Login_Initialize",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async (username, password) => {}",
+      "body": "async () => {\n  await storeValue(\"userdata\", {\n    'username': '',\n    'password': ''\n  });\n}",
       "selfReferencingDataPaths": [],
-      "jsArguments": [
-        {},
-        {}
-      ],
+      "jsArguments": [],
       "isAsync": true
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
@@ -38,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async (username, password) => {}"
+      "async () => {\n  await storeValue(\"userdata\", {\n    'username': '',\n    'password': ''\n  });\n}"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login_DoLogin.myFun2",
+  "id": "Login_Initialize.myFun2",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_639b66197b3ff97723bea967"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63a9c98cbc0e8334c729c2ce"
 }

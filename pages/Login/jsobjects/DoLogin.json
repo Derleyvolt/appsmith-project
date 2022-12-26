@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\t\tmyFun2: async (username, password) => {\n\t\t\t\t\n\t\t}\n}",
+    "body": "export default {\n\t\tLogin: (username, password) => {\n\t\t\t  storeValue(\"userdata\", { \"username\" : username, \"password\": password })\n\t\t\t\tlet response = getLoginToken.data\n\t\t\t\t\n\t\t\t\tif(response.hasOwnProperty('access')) {\n\t\t\t\t\t\tshowAlert(\"ENTROU\")\n\t\t\t\t\t\treturn response\n\t\t\t\t} else {\n\t\t\t\t\t\treturn {}\n\t\t\t\t}\n\t\t}\n}",
     "variables": [],
     "userPermissions": []
   },

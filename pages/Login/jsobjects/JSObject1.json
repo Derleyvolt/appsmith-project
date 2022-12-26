@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tGoToCadastro: () => {\n\t\tnavigateTo(\"Cadastro\")\n\t}\n}",
+    "body": "export default {\n\tGoToCadastro: async () => {\n\t\tlet username = Input1.text\n\t\tlet password = Input2.text\n\t\t\n\t\tlet ret = DoLogin.Login(username, password)\n\t\t\n\t\tif(ret.hasOwnProperty('access')) {\n\t\t\t\tappsmith.store.access_token  = ret.acess\n\t\t\t\tappsmith.store.refresh_token = ret.refresh\n\t\t\t\tnavigateTo(\"Tabela\")\n\t\t} else {\n\t\t\t\tshowAlert(\"Usuario ou senha incorretos\")\n\t\t}\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },
