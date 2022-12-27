@@ -115,7 +115,7 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "resetFormOnClick": true,
+                      "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1",
                       "onClick": "{{JSObject1.GoToCadastro()}}",
@@ -369,8 +369,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Login_Initialize.myFun2",
-              "name": "Initialize.myFun2",
+              "id": "Login_Initialize.initialize_func",
+              "name": "Initialize.initialize_func",
               "collectionId": "Login_Initialize",
               "clientSideExecution": true,
               "confirmBeforeExecute": false,

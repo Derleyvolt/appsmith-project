@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "getLoginToken",
+    "name": "cadastro_api",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -16,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Login",
+    "pageId": "Cadastro",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/account/token/",
+      "path": "/account/cadastrar",
       "headers": [
         {
           "key": "content-type",
@@ -59,7 +59,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login_getLoginToken",
+  "id": "Cadastro_cadastro_api",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_63a9bfb7bc0e8334c729c25d"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63aa6709bc0e8334c729c960"
 }

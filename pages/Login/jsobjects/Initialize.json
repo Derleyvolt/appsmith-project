@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tmyFun2: async () => {\n\t\t\tawait storeValue(\"userdata\", { 'username' : '', 'password' : '' })\n\t}\n}",
+    "body": "export default {\n\tinitialize_func: async () => {\n\t\t\tawait storeValue(\"userdata\", { 'username' : '', 'password' : '' })\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },

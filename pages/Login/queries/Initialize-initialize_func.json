@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "CreateAccount",
-    "fullyQualifiedName": "JSObject1.CreateAccount",
+    "name": "initialize_func",
+    "fullyQualifiedName": "Initialize.initialize_func",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,20 +13,18 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Cadastro",
-    "collectionId": "Cadastro_JSObject1",
+    "pageId": "Login",
+    "collectionId": "Login_Initialize",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async userData => {\n  await storeValue(\"userData\", [...appsmith.store.userData || [], userData]);\n}",
+      "body": "async () => {\n  await storeValue(\"userdata\", {\n    'username': '',\n    'password': ''\n  });\n}",
       "selfReferencingDataPaths": [],
-      "jsArguments": [
-        {}
-      ],
+      "jsArguments": [],
       "isAsync": true
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
@@ -37,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async userData => {\n  await storeValue(\"userData\", [...appsmith.store.userData || [], userData]);\n}"
+      "async () => {\n  await storeValue(\"userdata\", {\n    'username': '',\n    'password': ''\n  });\n}"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Cadastro_JSObject1.CreateAccount",
+  "id": "Login_Initialize.initialize_func",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_639b66844f35af560dc0f915"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63a9c98cbc0e8334c729c2ce"
 }
