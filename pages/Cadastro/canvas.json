@@ -97,6 +97,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "validation"
                         }
                       ],
                       "labelPosition": "Top",
@@ -104,6 +107,7 @@
                       "inputType": "PASSWORD",
                       "isDisabled": false,
                       "key": "9gp3aqj600",
+                      "validation": "{{cadastro_senha.text.length >= 5}}",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
@@ -256,6 +260,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "validation"
                         }
                       ],
                       "labelPosition": "Top",
@@ -263,6 +270,7 @@
                       "inputType": "TEXT",
                       "isDisabled": false,
                       "key": "9gp3aqj600",
+                      "validation": "{{cadastro_nome.text.length >= 5}}",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
