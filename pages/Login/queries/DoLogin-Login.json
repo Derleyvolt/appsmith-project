@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "(username, password) => {\n  storeValue(\"userdata\", {\n    \"username\": username,\n    \"password\": password\n  });\n  let response = getLoginToken.data;\n  if (response.hasOwnProperty('access')) {\n    showAlert(\"ENTROU\");\n    return response;\n  } else {\n    return {};\n  }\n}",
+      "body": "async (username, password) => {\n  return await storeValue(\"userdata\", {\n    \"username\": username,\n    \"password\": password\n  }).then(() => {\n    return getLoginToken.run().then(res => res);\n  }).then(res => {\n    if (res.hasOwnProperty('access')) {\n      return res;\n    }\n    return {};\n  });\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {},
@@ -38,7 +38,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "(username, password) => {\n  storeValue(\"userdata\", {\n    \"username\": username,\n    \"password\": password\n  });\n  let response = getLoginToken.data;\n  if (response.hasOwnProperty('access')) {\n    showAlert(\"ENTROU\");\n    return response;\n  } else {\n    return {};\n  }\n}"
+      "async (username, password) => {\n  return await storeValue(\"userdata\", {\n    \"username\": username,\n    \"password\": password\n  }).then(() => {\n    return getLoginToken.run().then(res => res);\n  }).then(res => {\n    if (res.hasOwnProperty('access')) {\n      return res;\n    }\n    return {};\n  });\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
