@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async (username, password) => {\n  return await storeValue(\"userdata\", {\n    \"username\": username,\n    \"password\": password\n  }).then(() => {\n    return getLoginToken.run().then(res => res);\n  }).then(res => {\n    if (res.hasOwnProperty('access')) {\n      return res;\n    }\n    return {};\n  }).catch(() => showAlert(\"Login ou senha incorretos\"));\n}",
+      "body": "async (username, password) => {\n  return await storeValue(\"userdata\", {\n    \"username\": username,\n    \"password\": password\n  }).then(() => {\n    return getLoginToken.run().then(res => res).catch(() => showAlert(\"Login ou senha incorretos\"));\n  }).then(res => {\n    if (res.hasOwnProperty('access')) {\n      return res;\n    }\n    return {};\n  }).catch(() => showAlert(\"Login ou senha incorretos\"));\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {},
@@ -38,7 +38,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async (username, password) => {\n  return await storeValue(\"userdata\", {\n    \"username\": username,\n    \"password\": password\n  }).then(() => {\n    return getLoginToken.run().then(res => res);\n  }).then(res => {\n    if (res.hasOwnProperty('access')) {\n      return res;\n    }\n    return {};\n  }).catch(() => showAlert(\"Login ou senha incorretos\"));\n}"
+      "async (username, password) => {\n  return await storeValue(\"userdata\", {\n    \"username\": username,\n    \"password\": password\n  }).then(() => {\n    return getLoginToken.run().then(res => res).catch(() => showAlert(\"Login ou senha incorretos\"));\n  }).then(res => {\n    if (res.hasOwnProperty('access')) {\n      return res;\n    }\n    return {};\n  }).catch(() => showAlert(\"Login ou senha incorretos\"));\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

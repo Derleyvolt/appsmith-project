@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tGoToCadastro: async () => {\n\t\tlet username = Input1.text\n\t\tlet password = Input2.text\n\t\t\n\t\tawait DoLogin.Login(username, password).then((obj) => {\n\t\t\tif(obj.hasOwnProperty('access')) {\n\t\t\t\t\tstoreValue('access_token', obj.access)\n\t\t\t\t\tstoreValue('refresh_token', obj.access)\n\t\t\t\t\tnavigateTo(\"Tabela\")\n\t\t\t} else {\n\t\t\t\t\tshowAlert(\"login ou senha incorretos\")\n\t\t\t}\n\t\t})\n\t}\n}",
+    "body": "export default {\n\tGoToCadastro: async () => {\n\t\tlet username = Input1.text\n\t\tlet password = Input2.text\n\t\t\n\t\tawait DoLogin.Login(username, password).then((obj) => {\n\t\t\tif(obj.hasOwnProperty('access')) {\n\t\t\t\t\tstoreValue('access_token', obj.access)\n\t\t\t\t\tstoreValue('refresh_token', obj.access)\n\t\t\t\t\tnavigateTo(\"Tabela\")\n\t\t\t} else {\n\t\t\t\t\tshowAlert(\"login ou senha incorretos\")\n\t\t\t}\n\t\t}).catch(() => showAlert(\"Login ou senha incorretos\"))\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },
