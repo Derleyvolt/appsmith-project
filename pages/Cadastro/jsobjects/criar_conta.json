@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tcreate_account: async () => {\n\t\t\tlet username = cadastro_nome.text\n\t\t\tlet password = cadastro_senha.text\n\t\t\t\n\t\t\tawait cadastro_api.run({ userdata : { 'username' : username, 'password' : password } }).then( () => showAlert(\"Usuário cadastraro com sucesso\") ).catch( () => {\n\t\t\t\t\tshowAlert(\"Aconteceu algum erro\")\n\t\t\t} )\n\t}\n}",
+    "body": "export default {\n\tcreate_account: async () => {\n\t\t\tlet username = cadastro_nome.text\n\t\t\tlet password = cadastro_senha.text\n\t\t\t\n\t\t\tawait cadastro_api.run({ userdata : { 'username' : username, 'password' : password } }).then( () => showAlert(\"Usuário cadastrado com sucesso\") ).catch( () => {\n\t\t\t\t\tshowAlert(\"Aconteceu algum erro\")\n\t\t\t})\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },

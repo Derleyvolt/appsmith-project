@@ -24,7 +24,7 @@
       "jsArguments": [
         {}
       ],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "clientSideExecution": true,

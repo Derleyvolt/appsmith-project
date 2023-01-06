@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "GoToCadastro",
-    "fullyQualifiedName": "JSObject1.GoToCadastro",
+    "name": "Login",
+    "fullyQualifiedName": "tryLogin.Login",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "Login",
-    "collectionId": "Login_JSObject1",
+    "collectionId": "Login_tryLogin",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  let username = Input1.text;\n  let password = Input2.text;\n  let res = await DoLogin.Login(username, password);\n  if (res.hasOwnProperty('access')) {\n    await storeValue('access_token', res.access);\n    await storeValue('refresh_token', res.access);\n    navigateTo(\"Tabela\");\n  }\n}",
+      "body": "async () => {\n  let username = Input1.text;\n  let password = Input2.text;\n  let res = await getToken.send_credentials(username, password);\n  if (res.hasOwnProperty('access')) {\n    await storeValue('access_token', res.access);\n    await storeValue('refresh_token', res.refresh);\n    navigateTo(\"Tabela\");\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  let username = Input1.text;\n  let password = Input2.text;\n  let res = await DoLogin.Login(username, password);\n  if (res.hasOwnProperty('access')) {\n    await storeValue('access_token', res.access);\n    await storeValue('refresh_token', res.access);\n    navigateTo(\"Tabela\");\n  }\n}"
+      "async () => {\n  let username = Input1.text;\n  let password = Input2.text;\n  let res = await getToken.send_credentials(username, password);\n  if (res.hasOwnProperty('access')) {\n    await storeValue('access_token', res.access);\n    await storeValue('refresh_token', res.refresh);\n    navigateTo(\"Tabela\");\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login_JSObject1.GoToCadastro",
+  "id": "Login_tryLogin.Login",
   "deleted": false,
   "gitSyncId": "637d55b1cbb10813d213d9ed_639b4656749a014ec6e5243b"
 }

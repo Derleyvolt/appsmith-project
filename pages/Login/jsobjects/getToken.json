@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "getToken",
+    "pageId": "Login",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\t\tsend_credentials: async (username, password) => {\t\t\t\n\t\t\t\tlet res = await getLoginToken.run({ userdata : {'username' : username, 'password' : password} }).catch( () => {\n\t\t\t\t\t\tshowAlert(\"Login ou senha incorretos\")\n\t\t\t\t\t\treturn {}\n\t\t\t\t})\n\t\t\t\t\n\t\t\t\tif(res.hasOwnProperty('access')) {\n\t\t\t\t\t\treturn res\n\t\t\t\t}\n\t\t\t\n\t\t\t\treturn {}\n\t\t}\t\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Login_getToken",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639b66197b3ff97723bea96a"
+}

@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  let username = cadastro_nome.text;\n  let password = cadastro_senha.text;\n  await cadastro_api.run({\n    userdata: {\n      'username': username,\n      'password': password\n    }\n  }).then(() => showAlert(\"Usuário cadastraro com sucesso\")).catch(() => {\n    showAlert(\"Aconteceu algum erro\");\n  });\n}",
+      "body": "async () => {\n  let username = cadastro_nome.text;\n  let password = cadastro_senha.text;\n  await cadastro_api.run({\n    userdata: {\n      'username': username,\n      'password': password\n    }\n  }).then(() => showAlert(\"Usuário cadastrado com sucesso\")).catch(() => {\n    showAlert(\"Aconteceu algum erro\");\n  });\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  let username = cadastro_nome.text;\n  let password = cadastro_senha.text;\n  await cadastro_api.run({\n    userdata: {\n      'username': username,\n      'password': password\n    }\n  }).then(() => showAlert(\"Usuário cadastraro com sucesso\")).catch(() => {\n    showAlert(\"Aconteceu algum erro\");\n  });\n}"
+      "async () => {\n  let username = cadastro_nome.text;\n  let password = cadastro_senha.text;\n  await cadastro_api.run({\n    userdata: {\n      'username': username,\n      'password': password\n    }\n  }).then(() => showAlert(\"Usuário cadastrado com sucesso\")).catch(() => {\n    showAlert(\"Aconteceu algum erro\");\n  });\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
