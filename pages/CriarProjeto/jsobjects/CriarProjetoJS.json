@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "CriarProjetoJS",
+    "pageId": "CriarProjeto",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tCriarProjeto: async () => {\n\t\t\tawait CriarProjetoAPI.run({ projetoDados : {'titulo' : Input1.text, 'contrato' : Input2.text, 'num_sap': Input3.text,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t 'id_coordenador' : Input4.text, 'id_proponente' : Input5.text } }).then(res => {\n\t\t\t\tshowAlert(res)\n\t\t\t}).catch( () => {\n\t\t\t\t\t\t\tshowAlert(\"Erro ao criar projeto\")\n\t\t\t\t\t\t\treturn false\n\t\t\t})\n\t\t\t\n\t\t\tnavigateTo(\"Projetos\")\n\t\t\treturn true\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "CriarProjeto_CriarProjetoJS",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63b76a1f04e95b100ff26474"
+}

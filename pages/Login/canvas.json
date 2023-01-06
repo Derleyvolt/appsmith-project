@@ -301,7 +301,7 @@
                       "labelStyle": "",
                       "inputType": "PASSWORD",
                       "isDisabled": false,
-                      "validation": "{{Input2.text.length >= 5}}",
+                      "validation": "{{Input2.text.length >= 3}}",
                       "isRequired": true,
                       "dynamicHeight": "FIXED",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",

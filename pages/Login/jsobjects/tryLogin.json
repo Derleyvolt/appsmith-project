@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tLogin: async () => {\n\t\t\t// obtem os dados dos widgets\n\t\t\tlet username = Input1.text\n\t\t\tlet password = Input2.text\n\t\t\t\n\t\t\t// envia a requisição referente ao login, envia o username e password pra API.\n\t\t\t// retorna o token ou um objeto vazio.\n\t\t\tlet res = await getToken.send_credentials(username, password)\n\t\t\t\n\t\t\t// se obteve sucesso no login, os dados do token são salvos\n\t\t\tif(res.hasOwnProperty('access')) {\n\t\t\t\t\tawait storeValue('access_token',  res.access)\n\t\t\t\t\tawait storeValue('refresh_token', res.refresh)\n\t\t\t\t\tnavigateTo(\"Tabela\")\n\t\t\t}\n\t}\n}",
+    "body": "export default {\n\tLogin: async () => {\n\t\t\t// obtem os dados dos widgets\n\t\t\tlet username = Input1.text\n\t\t\tlet password = Input2.text\n\t\t\t\n\t\t\t// envia a requisição referente ao login, envia o username e password pra API.\n\t\t\t// retorna o token ou um objeto vazio.\n\t\t\tlet res = await getToken.send_credentials(username, password)\n\t\t\t\n\t\t\t// se obteve sucesso no login, os dados do token são salvos\n\t\t\tif(res.hasOwnProperty('access')) {\n\t\t\t\t\tawait storeValue('access_token',  res.access)\n\t\t\t\t\tawait storeValue('refresh_token', res.refresh)\n\t\t\t\t\tnavigateTo(\"Projetos\")\n\t\t\t}\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },

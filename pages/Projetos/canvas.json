@@ -31,7 +31,7 @@
               "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
               "topRow": 1,
-              "isSortable": false,
+              "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
               "animateLoading": true,
@@ -59,13 +59,19 @@
                 },
                 {
                   "key": "primaryColumns.task.boxShadow"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "tableData"
                 }
               ],
               "leftColumn": 1,
               "delimiter": ",",
               "defaultSelectedRowIndex": 0,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-              "isVisibleFilters": true,
+              "isVisibleFilters": false,
               "isVisible": true,
               "enableClientSideSearch": true,
               "version": 1,
@@ -101,6 +107,7 @@
               "widgetName": "Table1",
               "defaultPageSize": 0,
               "columnOrder": [
+                "id",
                 "titulo",
                 "task"
               ],
@@ -111,7 +118,8 @@
                 "task": 245,
                 "step": 62,
                 "status": 75,
-                "titulo": 597
+                "titulo": 597,
+                "id": 60
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -172,6 +180,34 @@
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"titulo\"]))}}",
                   "validation": {},
                   "cellBackground": ""
+                },
+                "id": {
+                  "allowCellWrapping": false,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "id",
+                  "id": "id",
+                  "alias": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
               "key": "h0acl2dn39",
@@ -179,13 +215,13 @@
               "rightColumn": 53,
               "textSize": "0.875rem",
               "widgetId": "m4u4giefl5",
-              "tableData": "[\n  {\n    \"titulo\": \"#1\",\n    \"task\": \"\"\n  }\n]",
+              "tableData": "{{appsmith.store.ProjetosTable}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
               "renderMode": "CANVAS",
               "horizontalAlignment": "LEFT",
-              "isVisibleSearch": true,
+              "isVisibleSearch": false,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
             },
@@ -242,7 +278,22 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Projetos_CarregarProjetoBackground.CarregarProjetos",
+              "name": "CarregarProjetoBackground.CarregarProjetos",
+              "collectionId": "Projetos_CarregarProjetoBackground",
+              "clientSideExecution": true,
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  let data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  for (var i = 0; i < data.length; i++) {\n    data[i].task = \"\";\n  }\n  await storeValue(\"ProjetosTable\", data);\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Projetos",
@@ -253,7 +304,7 @@
     ],
     "userPermissions": [],
     "policies": [],
-    "isHidden": false
+    "isHidden": true
   },
   "deleted": false,
   "gitSyncId": "637d55b1cbb10813d213d9ed_63ac501dfcb7cc4992ae0632"

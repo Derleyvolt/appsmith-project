@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "CarregarProjetoBackground",
+    "pageId": "Projetos",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tCarregarProjetos: async () => {\n\t\t\tlet data =  await ObterProjetosAPI.run().catch(res => {\n\t\t\t\t\tshowAlert(res)\n\t\t\t})\n\t\t\t\n\t\t\tfor(var i = 0; i < data.length; i++) {\n\t\t\t\t\tdata[i].task = \"\"\n\t\t\t}\n\t\t\t\n\t\t\tawait storeValue(\"ProjetosTable\", data)\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Projetos_CarregarProjetoBackground",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63b793f860108a1256293750"
+}
