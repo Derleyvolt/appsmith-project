@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "CriarProjetoJS",
+    "pageId": "CadastrarProjeto",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tCriarProjeto: async () => {\n\t\t\tawait CriarProjetoAPI.run({ projetoDados : {'titulo' : Input1.text, 'contrato' : Input2.text, 'num_sap': Input3.text,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t 'id_coordenador' : Select1.selectedOptionValue, 'id_proponente' : Select2.selectedOptionValue } }).then(res => {\n\t\t\t\tshowAlert(res)\n\t\t\t\tnavigateTo(\"Projetos\")\n\t\t\t}).catch( () => {\n\t\t\t\t\t\t\tshowAlert(\"Erro ao criar projeto\")\n\t\t\t})\n\t},\n\t\n\tLoadPage: async () => {\n\t\t\tlet data = await LoadFavorecidosAPI.run().catch(() => { showAlert(\"Erro na requisição dos dados\") })\n\t\t\t\n\t\t\tlet lista_favorecidos = []\n\t\t\t\n\t\t\tfor(var e of data) {\n\t\t\t\t\tlista_favorecidos.push({'label': e['nome'], 'value': e['id']})\n\t\t\t}\n\t\t\t\n\t\t\tawait storeValue(\"favorecidos\", lista_favorecidos)\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "CadastrarProjeto_CriarProjetoJS",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63b76a1f04e95b100ff26474"
+}

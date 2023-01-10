@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "Teste",
-    "fullyQualifiedName": "SaveTable.Teste",
+    "name": "myFun2",
+    "fullyQualifiedName": "JSObject1.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,18 +13,19 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Tabela",
-    "collectionId": "Tabela_SaveTable",
+    "pageId": "Extrato",
+    "collectionId": "Extrato_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  for (var idx of Table1.tableData) {\n    showAlert(idx.id);\n  }\n}",
+      "body": "async () => {}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  for (var idx of Table1.tableData) {\n    showAlert(idx.id);\n  }\n}"
+      "async () => {}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Tabela_SaveTable.Teste",
+  "id": "Extrato_JSObject1.myFun2",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_639b2b8c57ef71224576db24"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639085d0cdae3243e1bab3b1"
 }

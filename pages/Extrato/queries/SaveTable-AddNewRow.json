@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "GenerateFakeDataToTesting",
-    "fullyQualifiedName": "JSObject2.GenerateFakeDataToTesting",
+    "name": "AddNewRow",
+    "fullyQualifiedName": "SaveTable.AddNewRow",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,13 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Tabela",
-    "collectionId": "Tabela_JSObject2",
+    "pageId": "Extrato",
+    "collectionId": "Extrato_SaveTable",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let body = DerleyQuery.data;\n  for (let e of body) {\n    JS_InsertRow.insert_row_in_table(e);\n  }\n}",
+      "body": "() => {\n  if (Table1.isAddRowInProgress == true) {\n    JS_InsertRow.insert_row_in_table(Table1.newRow);\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let body = DerleyQuery.data;\n  for (let e of body) {\n    JS_InsertRow.insert_row_in_table(e);\n  }\n}"
+      "() => {\n  if (Table1.isAddRowInProgress == true) {\n    JS_InsertRow.insert_row_in_table(Table1.newRow);\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Tabela_JSObject2.GenerateFakeDataToTesting",
+  "id": "Extrato_SaveTable.AddNewRow",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_639b57fe465a9d17623520d9"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639ac63303959a6b55a239b5"
 }

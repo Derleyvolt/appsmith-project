@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
     "name": "JSObject1",
-    "pageId": "Tabela",
+    "pageId": "Extrato",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -19,7 +19,7 @@
     ],
     "userPermissions": []
   },
-  "id": "Tabela_JSObject1",
+  "id": "Extrato_JSObject1",
   "deleted": false,
   "gitSyncId": "637d55b1cbb10813d213d9ed_639085d0cdae3243e1bab3b4"
 }

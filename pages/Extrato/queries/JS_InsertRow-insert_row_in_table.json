@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "AddNewRow",
-    "fullyQualifiedName": "SaveTable.AddNewRow",
+    "name": "insert_row_in_table",
+    "fullyQualifiedName": "JS_InsertRow.insert_row_in_table",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,15 +13,17 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Tabela",
-    "collectionId": "Tabela_SaveTable",
+    "pageId": "Extrato",
+    "collectionId": "Extrato_JS_InsertRow",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (Table1.isAddRowInProgress == true) {\n    JS_InsertRow.insert_row_in_table(Table1.newRow);\n  }\n}",
+      "body": "row_data => {\n  let table = appsmith.store.dt;\n  table.push(row_data);\n  storeValue(\"dt\", table);\n  return \"Sucess\";\n}",
       "selfReferencingDataPaths": [],
-      "jsArguments": [],
+      "jsArguments": [
+        {}
+      ],
       "isAsync": false
     },
     "executeOnLoad": false,
@@ -35,14 +37,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (Table1.isAddRowInProgress == true) {\n    JS_InsertRow.insert_row_in_table(Table1.newRow);\n  }\n}"
+      "row_data => {\n  let table = appsmith.store.dt;\n  table.push(row_data);\n  storeValue(\"dt\", table);\n  return \"Sucess\";\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Tabela_SaveTable.AddNewRow",
+  "id": "Extrato_JS_InsertRow.insert_row_in_table",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_639ac63303959a6b55a239b5"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639acc1f5b4b533c8eaa7fdd"
 }

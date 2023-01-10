@@ -2,13 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "DerleyQuery",
+    "name": "CadastroAPI",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
-        "url": "193.123.120.206:3333/planilha"
+        "url": "http://193.123.120.206:3333"
       },
       "invalids": [],
       "messages": [],
@@ -17,16 +16,26 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Tabela",
+    "pageId": "CadastrarFavorecido",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "",
-      "headers": [],
+      "path": "/app/cadastrar/criar_favorecido/",
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/json"
+        },
+        {
+          "key": "Authorization",
+          "value": "Bearer {{appsmith.store.access_token}}"
+        }
+      ],
       "encodeParamsToggle": true,
       "queryParameters": [],
+      "body": "{{this.params.FavorecidoDados}}",
       "bodyFormData": [],
-      "httpMethod": "GET",
+      "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -38,17 +47,27 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "headers[1].value"
+      },
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.store.access_token",
+      "this.params.FavorecidoDados"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Tabela_DerleyQuery",
+  "id": "CadastrarFavorecido_CadastroAPI",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_637f9b2ddbc6e8336d95fb2e"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63b800df04e95b100ff26c84"
 }

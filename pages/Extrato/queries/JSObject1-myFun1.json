@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Tabela",
-    "collectionId": "Tabela_JSObject1",
+    "pageId": "Extrato",
+    "collectionId": "Extrato_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -42,7 +42,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Tabela_JSObject1.myFun1",
+  "id": "Extrato_JSObject1.myFun1",
   "deleted": false,
   "gitSyncId": "637d55b1cbb10813d213d9ed_639085d0cdae3243e1bab3b0"
 }

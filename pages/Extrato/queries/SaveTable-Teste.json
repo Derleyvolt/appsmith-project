@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "insert_row_in_table",
-    "fullyQualifiedName": "JS_InsertRow.insert_row_in_table",
+    "name": "Teste",
+    "fullyQualifiedName": "SaveTable.Teste",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,21 +13,18 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Tabela",
-    "collectionId": "Tabela_JS_InsertRow",
+    "pageId": "Extrato",
+    "collectionId": "Extrato_SaveTable",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "row_data => {\n  let table = appsmith.store.dt;\n  table.push(row_data);\n  storeValue(\"dt\", table);\n  return \"Sucess\";\n}",
+      "body": "() => {\n  for (var idx of Table1.tableData) {\n    showAlert(idx.id);\n  }\n}",
       "selfReferencingDataPaths": [],
-      "jsArguments": [
-        {}
-      ],
-      "isAsync": false
+      "jsArguments": [],
+      "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -37,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "row_data => {\n  let table = appsmith.store.dt;\n  table.push(row_data);\n  storeValue(\"dt\", table);\n  return \"Sucess\";\n}"
+      "() => {\n  for (var idx of Table1.tableData) {\n    showAlert(idx.id);\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Tabela_JS_InsertRow.insert_row_in_table",
+  "id": "Extrato_SaveTable.Teste",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_639acc1f5b4b533c8eaa7fdd"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639b2b8c57ef71224576db24"
 }

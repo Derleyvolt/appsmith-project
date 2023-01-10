@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Tabela",
+    "pageId": "Extrato",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -37,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Tabela_Query1",
+  "id": "Extrato_Query1",
   "deleted": false,
   "gitSyncId": "637d55b1cbb10813d213d9ed_63a26384465a9d1762357fd9"
 }

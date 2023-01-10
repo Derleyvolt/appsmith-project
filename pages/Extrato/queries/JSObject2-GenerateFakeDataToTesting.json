@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "ClearTable",
-    "fullyQualifiedName": "SaveTable.ClearTable",
+    "name": "GenerateFakeDataToTesting",
+    "fullyQualifiedName": "JSObject2.GenerateFakeDataToTesting",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,18 +13,19 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Tabela",
-    "collectionId": "Tabela_SaveTable",
+    "pageId": "Extrato",
+    "collectionId": "Extrato_JSObject2",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  storeValue(\"dt\", []);\n}",
+      "body": "() => {\n  let body = DerleyQuery.data;\n  for (let e of body) {\n    JS_InsertRow.insert_row_in_table(e);\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  storeValue(\"dt\", []);\n}"
+      "() => {\n  let body = DerleyQuery.data;\n  for (let e of body) {\n    JS_InsertRow.insert_row_in_table(e);\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Tabela_SaveTable.ClearTable",
+  "id": "Extrato_JSObject2.GenerateFakeDataToTesting",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_639b2dc67c323677ddd83ad0"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639b57fe465a9d17623520d9"
 }

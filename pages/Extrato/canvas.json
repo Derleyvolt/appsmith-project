@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Tabela",
-    "slug": "tabela",
+    "name": "Extrato",
+    "slug": "extrato",
     "layouts": [
       {
         "viewMode": false,
@@ -772,7 +772,7 @@
         "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Tabela",
+        "id": "Extrato",
         "deleted": false,
         "policies": [],
         "userPermissions": []

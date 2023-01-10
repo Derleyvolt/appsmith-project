@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
     "name": "JS_InsertRow",
-    "pageId": "Tabela",
+    "pageId": "Extrato",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -19,7 +19,7 @@
     ],
     "userPermissions": []
   },
-  "id": "Tabela_JS_InsertRow",
+  "id": "Extrato_JS_InsertRow",
   "deleted": false,
   "gitSyncId": "637d55b1cbb10813d213d9ed_639acc1f5b4b533c8eaa7fe1"
 }
