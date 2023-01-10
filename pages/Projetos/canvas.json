@@ -111,7 +111,11 @@
                 "titulo",
                 "task"
               ],
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "primaryColumns.task.isDisabled"
+                }
+              ],
               "compactMode": "DEFAULT",
               "displayName": "Table",
               "bottomRow": 51,
@@ -152,7 +156,8 @@
                   "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
                   "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                   "customAlias": "",
-                  "buttonLabel": "Editar"
+                  "buttonLabel": "Editar",
+                  "isDisabled": ""
                 },
                 "titulo": {
                   "allowCellWrapping": false,

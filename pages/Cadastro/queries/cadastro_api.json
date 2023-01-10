@@ -20,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/account/cadastrar",
+      "path": "/app/cadastrar_usuario/",
       "headers": [
         {
           "key": "content-type",

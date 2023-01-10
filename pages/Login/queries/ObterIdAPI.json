@@ -20,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/account/obter_id/",
+      "path": "/app/obter_id_usuario/",
       "headers": [
         {
           "key": "content-type",

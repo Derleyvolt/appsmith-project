@@ -20,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/account/token/",
+      "path": "/app/token/",
       "headers": [
         {
           "key": "content-type",
