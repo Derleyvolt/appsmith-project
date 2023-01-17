@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "status_btn",
-    "fullyQualifiedName": "JSObject1.status_btn",
+    "name": "cadastrar_rubrica",
+    "fullyQualifiedName": "JSObject1.cadastrar_rubrica",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,13 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Projetos",
-    "collectionId": "Projetos_JSObject1",
+    "pageId": "CadastrarRubrica",
+    "collectionId": "CadastrarRubrica_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await storeValue(\"id_projeto_atual\", Table1.triggeredRow.id);\n  navigateTo('Extrato');\n}",
+      "body": "async () => {\n  await CadastroRubricaAPI.run({\n    rubricaDados: {\n      \"descricao\": Input1.text\n    }\n  }).then(() => {\n    showAlert(\"Rubrica cadastrada\");\n    navigateTo(\"Extrato\");\n  }).catch(() => {\n    showAlert(\"Erro ao criar rubrica\");\n  });\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  await storeValue(\"id_projeto_atual\", Table1.triggeredRow.id);\n  navigateTo('Extrato');\n}"
+      "async () => {\n  await CadastroRubricaAPI.run({\n    rubricaDados: {\n      \"descricao\": Input1.text\n    }\n  }).then(() => {\n    showAlert(\"Rubrica cadastrada\");\n    navigateTo(\"Extrato\");\n  }).catch(() => {\n    showAlert(\"Erro ao criar rubrica\");\n  });\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Projetos_JSObject1.status_btn",
+  "id": "CadastrarRubrica_JSObject1.cadastrar_rubrica",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_63bd6dc860108a1256298677"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63c68273ff1c07648e0b4e87"
 }

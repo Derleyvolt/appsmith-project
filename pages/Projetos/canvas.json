@@ -129,7 +129,11 @@
               "parentRowSpace": 10,
               "hideCard": false,
               "parentColumnSpace": 17.9375,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "primaryColumns.task.onClick"
+                }
+              ],
               "borderWidth": "1",
               "primaryColumns": {
                 "task": {
@@ -156,8 +160,9 @@
                   "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
                   "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                   "customAlias": "",
-                  "buttonLabel": "Editar",
-                  "isDisabled": ""
+                  "buttonLabel": "Editar extrato\n",
+                  "isDisabled": "",
+                  "onClick": "{{JSObject1.status_btn()}}"
                 },
                 "titulo": {
                   "allowCellWrapping": false,

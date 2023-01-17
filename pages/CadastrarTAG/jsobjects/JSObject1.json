@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "CadastrarTAG",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tcadastrar_TAG: async () => {\n\t\t\tawait CadastroTAGAPI.run({ tagDados : {\"descricao\" : Input1.text} }).then(() => {\n\t\t\t\tshowAlert(\"TAG cadastrada\")\n\t\t\t\tnavigateTo(\"Extrato\")\n\t\t\t}).catch( () => {\n\t\t\t\t\t\t\tshowAlert(\"Erro ao criar TAG\")\n\t\t\t})\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "CadastrarTAG_JSObject1",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63c68a1608b52d06b80a0e1d"
+}

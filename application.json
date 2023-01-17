@@ -23,6 +23,14 @@
     {
       "id": "CadastrarFavorecido",
       "isDefault": false
+    },
+    {
+      "id": "CadastrarRubrica",
+      "isDefault": false
+    },
+    {
+      "id": "CadastrarTAG",
+      "isDefault": false
     }
   ],
   "viewMode": false,
