@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "LoadFavorecidosAPI",
+    "name": "ObterMovimentacoesAPI",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -16,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "CadastrarProjeto",
+    "pageId": "Projetos",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/app/cadastrar/obter_tudo_favorecido/",
+      "path": "/app/cadastrar/listar_movimentacao/",
       "headers": [
         {
           "key": "Authorization",
@@ -58,7 +58,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "CadastrarProjeto_LoadFavorecidosAPI",
+  "id": "Projetos_ObterMovimentacoesAPI",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_63b8066c04e95b100ff26cdc"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63c6db097a37c13f6f084193"
 }

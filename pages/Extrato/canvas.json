@@ -79,13 +79,28 @@
                   "key": "primaryColumns.Valor.computedValue"
                 },
                 {
-                  "key": "primaryColumns.id_tag.computedValue"
-                },
-                {
                   "key": "primaryColumns.obs.computedValue"
                 },
                 {
                   "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Rubrica.selectOptions"
+                },
+                {
+                  "key": "primaryColumns.Tag.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Tag.selectOptions"
+                },
+                {
+                  "key": "primaryColumns.tipo_mov.selectOptions"
+                },
+                {
+                  "key": "primaryColumns.Favorecido.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Favorecido.selectOptions"
                 }
               ],
               "leftColumn": 0,
@@ -135,9 +150,10 @@
                 "Rubrica",
                 "Data",
                 "Valor",
-                "id_tag",
                 "obs",
-                "EditActions1"
+                "EditActions1",
+                "Tag",
+                "Favorecido"
               ],
               "dynamicPropertyPathList": [
                 {
@@ -228,7 +244,9 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tipo_mov\"]))}}",
                   "validation": {},
-                  "cellBackground": ""
+                  "cellBackground": "",
+                  "selectOptions": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.movimentacoes))}}",
+                  "serverSideFiltering": true
                 },
                 "id_projeto": {
                   "allowCellWrapping": false,
@@ -284,7 +302,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Rubrica\"]))}}",
                   "validation": {},
-                  "cellBackground": ""
+                  "cellBackground": "",
+                  "selectOptions": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.rubricas))}}"
                 },
                 "Data": {
                   "allowCellWrapping": false,
@@ -342,34 +361,6 @@
                   "validation": {},
                   "cellBackground": ""
                 },
-                "id_tag": {
-                  "allowCellWrapping": false,
-                  "index": 5,
-                  "width": 150,
-                  "originalId": "id_tag",
-                  "id": "id_tag",
-                  "alias": "id_tag",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": true,
-                  "isEditable": true,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "id_tag",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id_tag\"]))}}",
-                  "validation": {},
-                  "cellBackground": ""
-                },
                 "obs": {
                   "allowCellWrapping": false,
                   "index": 6,
@@ -413,7 +404,7 @@
                   "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": true,
+                  "isVisible": false,
                   "isDisabled": false,
                   "isCellEditable": false,
                   "isEditable": false,
@@ -425,6 +416,64 @@
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
                   "validation": {},
                   "cellBackground": ""
+                },
+                "Tag": {
+                  "allowCellWrapping": false,
+                  "index": 7,
+                  "width": 150,
+                  "originalId": "Tag",
+                  "id": "Tag",
+                  "alias": "Tag",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "select",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Tag",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Tag\"]))}}",
+                  "validation": {},
+                  "cellBackground": "",
+                  "selectOptions": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.tags))}}"
+                },
+                "Favorecido": {
+                  "allowCellWrapping": false,
+                  "index": 6,
+                  "width": 150,
+                  "originalId": "Favorecido",
+                  "id": "Favorecido",
+                  "alias": "Favorecido",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "select",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Favorecido",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Favorecido\"]))}}",
+                  "validation": {},
+                  "cellBackground": "",
+                  "selectOptions": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.favorecidos))}}"
                 }
               },
               "key": "dbjhad4xem",
@@ -433,7 +482,7 @@
               "textSize": "0.875rem",
               "widgetId": "c2h2nrremc",
               "allowAddNewRow": true,
-              "tableData": "[{\n    \"id\": 1,\n\t\t\"tipo_mov\" : 1,\n\t\t\"id_projeto\" : 5,\n\t\t\"Rubrica\" : \"Viagens\",\n\t\t\"Data\"  : \"17/01/2023\",\n\t\t\"Valor\" : \"R$ 300,00\",\n\t\t\"id_tag\" : \"\",\n\t\t\"obs\": \"alguma coisa\"\n}]",
+              "tableData": "[{\n    \"id\": 1,\n\t\t\"tipo_mov\" : 1,\n\t\t\"id_projeto\" : 5,\n\t\t\"Rubrica\" : \"Viagens\",\n\t\t\"Data\"  : \"17/01/2023\",\n\t\t\"Valor\" : \"R$ 300,00\",\n\t\t\"Favorecido\": \"\",\n\t\t\"Tag\" : \"\",\n\t\t\"obs\": \"alguma coisa\"\n}]",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",

@@ -19,12 +19,12 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "row_data => {\n  let table = appsmith.store.dt;\n  table.push(row_data);\n  storeValue(\"dt\", table);\n  return \"Sucess\";\n}",
+      "body": "async row_data => {\n  let table = appsmith.store.dt;\n  table.push(row_data);\n  await storeValue(\"dt\", table);\n  return \"Sucess\";\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {}
       ],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,
@@ -37,7 +37,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "row_data => {\n  let table = appsmith.store.dt;\n  table.push(row_data);\n  storeValue(\"dt\", table);\n  return \"Sucess\";\n}"
+      "async row_data => {\n  let table = appsmith.store.dt;\n  table.push(row_data);\n  await storeValue(\"dt\", table);\n  return \"Sucess\";\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

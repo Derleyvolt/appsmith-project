@@ -490,21 +490,7 @@
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "CadastrarProjeto_CriarProjetoJS.LoadPage",
-              "name": "CriarProjetoJS.LoadPage",
-              "collectionId": "CadastrarProjeto_CriarProjetoJS",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  let data = await LoadFavorecidosAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados\");\n  });\n  let lista_favorecidos = [];\n  for (var e of data) {\n    lista_favorecidos.push({\n      'label': e['nome'],\n      'value': e['id']\n    });\n  }\n  await storeValue(\"favorecidos\", lista_favorecidos);\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "CadastrarProjeto",

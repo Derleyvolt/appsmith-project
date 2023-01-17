@@ -353,6 +353,17 @@
                 "async () => {\n  let data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  for (var i = 0; i < data.length; i++) {\n    data[i].task = \"\";\n  }\n  await storeValue(\"ProjetosTable\", data);\n}"
               ],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Projetos_CriarProjetoJS.LoadPage",
+              "name": "CriarProjetoJS.LoadPage",
+              "collectionId": "Projetos_CriarProjetoJS",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  let data_favorecido = await LoadFavorecidosAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados de favorecidos\");\n  });\n  let data_movimentacao = await ObterMovimentacoesAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados de movimentacão\");\n  });\n  let data_rubrica = await ObterRubricasAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados de rubricas\");\n  });\n  let data_tag = await ObterTAGsAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados das TAGs\");\n  });\n  let lista_favorecidos = [];\n  let lista_movimentacao = [];\n  let lista_rubrica = [];\n  let lista_tag = [];\n  for (let e of data_favorecido) {\n    lista_favorecidos.push({\n      'label': e['nome'],\n      'value': e['id']\n    });\n  }\n  for (let e of data_movimentacao) {\n    lista_movimentacao.push({\n      'label': e['descricao'],\n      'value': e['id']\n    });\n  }\n  for (let e of data_rubrica) {\n    lista_rubrica.push({\n      'label': e['descricao'],\n      'value': e['id']\n    });\n  }\n  for (let e of data_tag) {\n    lista_tag.push({\n      'label': e['descricao'],\n      'value': e['id']\n    });\n  }\n  await storeValue(\"favorecidos\", lista_favorecidos);\n  await storeValue(\"movimentacoes\", lista_movimentacao);\n  await storeValue(\"rubricas\", lista_rubrica);\n  await storeValue(\"tags\", lista_tag);\n  await showAlert(\"Tudo carregado\");\n}"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ]
         ],

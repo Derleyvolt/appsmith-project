@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tstatus_btn: async () => {\n\t\t\tawait storeValue(\"id_projeto_atual\", Table1.triggeredRow.id)\n\t\t\t\n\t\t\tnavigateTo('Extrato')\n\t}\n}",
+    "body": "export default {\n\tstatus_btn: async () => {\n\t\t\tawait storeValue(\"id_projeto_atual\", Table1.triggeredRow.id)\n\t\t\tnavigateTo('Extrato')\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },
