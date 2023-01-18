@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "JS_DefaultValues",
+    "pageId": "Extrato",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tdefault_values: async () => {\n\t\t  let extrato = appsmith.store.extrato\n\t\t\t\n\t\t\tlet cur_date   = new Date(Date.now())\n\t\t\tlet parsedDate = cur_date.toISOString()\n\t\t\tparsedDate     = parsedDate.substring(0, parsedDate.indexOf(\"T\"))\n\t\t\t\n\t\t\tlet id_projeto = appsmith.store.id_projeto_atual\n\t\t\t\n\t\t\textrato.push({ \"tipo_mov\" : \"\", \n\t\t\t\t\t\t\t\t\t   \"id_projeto\" : id_projeto, \n\t\t\t\t\t\t\t\t\t   \"Rubrica\" : \"\",\n\t\t\t\t\t\t\t\t\t   \"Data\"  : parsedDate,\n\t\t\t\t\t\t\t\t\t   \"Valor\" : \"\",\n\t\t\t\t\t\t\t\t\t   \"Favorecido\": \"\",\n\t\t\t\t\t\t\t\t\t   \"Tag\" : \"\",\t\n\t\t\t\t\t\t\t\t\t   \"obs\": \"\"})\n\t\t\t\n\t\t\tawait storeValue(\"extrato\", extrato)\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Extrato_JS_DefaultValues",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639085d0cdae3243e1bab3b4"
+}

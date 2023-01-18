@@ -35,15 +35,15 @@
               "searchTags": [
                 "group"
               ],
-              "topRow": 4,
-              "bottomRow": 43,
+              "topRow": 6,
+              "bottomRow": 45,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
               "shouldScrollContents": true,
               "animateLoading": true,
               "parentColumnSpace": 17.9375,
-              "leftColumn": 16,
+              "leftColumn": 19,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -80,11 +80,12 @@
                       "bottomRow": 5,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
+                      "shouldScrollContents": true,
                       "animateLoading": true,
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 11,
+                      "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -101,8 +102,8 @@
                       "text": "Cadastro de Favorecido",
                       "key": "vbnwo45oh4",
                       "isDeprecated": false,
-                      "rightColumn": 54,
-                      "textAlign": "LEFT",
+                      "rightColumn": 64,
+                      "textAlign": "CENTER",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "h2oug091yy",
                       "isVisible": true,
@@ -115,7 +116,7 @@
                       "originalTopRow": 1,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 7,
+                      "originalBottomRow": 5,
                       "fontSize": "1.25rem",
                       "minDynamicHeight": 4
                     },
@@ -400,7 +401,7 @@
               "key": "hyvwzfk15z",
               "backgroundColor": "#FFFFFF",
               "isDeprecated": false,
-              "rightColumn": 37,
+              "rightColumn": 40,
               "dynamicHeight": "AUTO_HEIGHT",
               "widgetId": "eajot0pwhm",
               "isVisible": true,

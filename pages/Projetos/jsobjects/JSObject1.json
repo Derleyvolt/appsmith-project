@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tstatus_btn: async () => {\n\t\t\tawait storeValue(\"id_projeto_atual\", Table1.triggeredRow.id)\n\t\t\tnavigateTo('Extrato')\n\t}\n}",
+    "body": "export default {\n\tparseJSON : (extrato) => {\n\t\t\treturn {\n\t\t\t\t\t\t\t\"id\": extrato.id,\n\t\t\t\t\t\t\t\"tipo_mov\" : extrato.id_movimentacao,\n\t\t\t\t\t\t\t\"id_projeto\" : extrato.id_projeto,\n\t\t\t\t\t\t\t\"Rubrica\" : extrato.id_rubrica,\n\t\t\t\t\t\t\t\"Data\"  : extrato.data,\n\t\t\t\t\t\t\t\"Valor\" : extrato.valor,\n\t\t\t\t\t\t\t\"Favorecido\": extrato.id_favorecido,\n\t\t\t\t\t\t\t\"Tag\" : extrato.id_tag,\n\t\t\t\t\t\t\t\"obs\": extrato.observacao\n\t\t\t\t\t\t}\n\t},\n\tcarregar_extrato: async () => {\n\t\t\tawait storeValue(\"id_projeto_atual\", Table1.triggeredRow.id)\n\t\t\tawait ObterExtratosAPI.run().then( async (res) => {\n\t\t\t\t\tif (res == undefined) {\n\t\t\t\t\t\t\tawait storeValue(\"extrato\", [])\n\t\t\t\t\t} else {\n\t\t\t\t\t\t\tlet toModel = []\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tres.forEach( (e) => {\n\t\t\t\t\t\t\t\t\ttoModel.push(JSObject1.parseJSON(e))\n\t\t\t\t\t\t\t\t\tconsole.log(toModel[toModel.length-1])\n\t\t\t\t\t\t\t})\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tawait storeValue(\"extrato\", toModel)\n\t\t\t\t\t}\n\t\t\t\t\n\t\t\t\t\tnavigateTo('Extrato')\n\t\t\t} ).catch( async () => {\n\t\t\t\t\tawait showAlert(\"Erro ao carregar extratos\")\n\t\t\t})\n\t\t\n\t\t\treturn appsmith.store.extrato\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },

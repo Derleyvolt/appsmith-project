@@ -6,17 +6,8 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tinsert_row_in_table: async (row_data) => {\n\t\t\tlet table = appsmith.store.dt;\n\t\t\ttable.push(row_data)\n\t\t\tawait storeValue(\"dt\", table)\n\t    return \"Sucess\"\n\t}\n}",
-    "variables": [
-      {
-        "name": "myVar1",
-        "value": "[]"
-      },
-      {
-        "name": "myVar2",
-        "value": "{}"
-      }
-    ],
+    "body": "export default {\n\t\tParseJSON: (e) => {\n\t\t\t\treturn {\n\t\t\t\t\t\"id\"               : e.id,\n\t\t\t\t\t\"data\"\t\t\t\t\t\t : e.Data,\n\t\t\t\t\t\"id_favorecido\"    : e.Favorecido,\n\t\t\t\t\t\"id_rubrica\" \t\t\t : e.Rubrica,\n\t\t\t\t\t\"id_tag\" \t\t\t\t\t : e.Tag,\n\t\t\t\t\t\"valor\" \t\t\t\t\t : e.Valor,\n\t\t\t\t\t\"id_projeto\" \t\t\t : e.id_projeto,\n\t\t\t\t\t\"observacao\" \t\t\t : e.obs,\n\t\t\t\t\t\"id_movimentacao\"  : e.tipo_mov }\n\t\t},\n\t\n\t\tUpdateAndSave: async () => {\n\t\t\t\tlet data = Table1.tableData.map((e) => e)\n\t\t\t\t\n\t\t\t\tdata[Table1.triggeredRowIndex] = Table1.updatedRow\n\t\t\t\n\t\t\t\tlet e = Table1.updatedRow\n\t\t\t\t\n\t\t\t\tconsole.log(Table1.updatedRow)\n\t\t\t\n\t\t\t\tlet parsedObj = \t\t{\n\t\t\t\t\t\"data\"\t\t\t\t\t\t : e.Data,\n\t\t\t\t\t\"id_favorecido\"    : e.Favorecido,\n\t\t\t\t\t\"id_rubrica\" \t\t\t : e.Rubrica,\n\t\t\t\t\t\"id_tag\" \t\t\t\t\t : e.Tag,\n\t\t\t\t\t\"valor\" \t\t\t\t\t : e.Valor,\n\t\t\t\t\t\"id_projeto\" \t\t\t : e.id_projeto,\n\t\t\t\t\t\"observacao\" \t\t\t : e.obs,\n\t\t\t\t\t\"id_movimentacao\"  : e.tipo_mov \n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tif(e.id != undefined) {\n\t\t\t\t\t\t\t\tawait storeValue(\"id_lancamento\", e.id)\n\t\t\t\t\t\t\t\tawait AtualizarLancamentoAPI.run({ ExtratoDados : parsedObj}).then(async (res) => {\n\t\t\t\t\t\t\t\tdata[Table1.triggeredRowIndex] = Table1.updatedRow\n\t\t\t\t\t\t\t\tawait storeValue(\"extrato\", data)\n\t\t\t\t\t\t\t\tawait showAlert(\"Sucesso\")\n\t\t\t\t\t\t}).catch( async () => {\n\t\t\t\t\t\t\t\tawait showAlert(\"Algum erro ocorreu na atualização dos dados\")\n\t\t\t\t\t\t})\n\t\t\t\t} else {\n\t\t\t\t\t\t\t\tawait CriarLancamentoAPI.run({ ExtratoDados : parsedObj}).then(async (res) => {\n\t\t\t\t\t\t\t\tdata[Table1.triggeredRowIndex].id = res.id\n\t\t\t\t\t\t\t\tawait storeValue(\"extrato\", data)\n\t\t\t\t\t\t\t\tawait showAlert(\"Sucesso\")\n\t\t\t\t\t\t}).catch( async () => {\n\t\t\t\t\t\t\t\tawait showAlert(\"Algum erro ocorreu na atualização dos dados\")\n\t\t\t\t\t\t})\n\t\t\t\t}\n\t\t}\n}",
+    "variables": [],
     "userPermissions": []
   },
   "id": "Extrato_JS_InsertRow",

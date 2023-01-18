@@ -2,13 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "DerleyQuery",
+    "name": "ObterExtratosAPI",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
-        "url": "193.123.120.206:3333/planilha"
+        "url": "http://193.123.120.206:3333"
       },
       "invalids": [],
       "messages": [],
@@ -17,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Extrato",
+    "pageId": "Projetos",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "",
+      "path": "/app/cadastrar/1/obter_extratos/",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
@@ -34,11 +33,15 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "path"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
@@ -48,7 +51,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Extrato_DerleyQuery",
+  "id": "Projetos_ObterExtratosAPI",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_637f9b2ddbc6e8336d95fb2e"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63c732d17a37c13f6f084604"
 }

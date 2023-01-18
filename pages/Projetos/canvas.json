@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 760,
+          "bottomRow": 810,
           "containerStyle": "none",
           "snapRows": 76,
           "parentRowSpace": 1,
@@ -67,7 +67,7 @@
                   "key": "tableData"
                 }
               ],
-              "leftColumn": 1,
+              "leftColumn": 0,
               "delimiter": ",",
               "defaultSelectedRowIndex": 0,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -118,12 +118,12 @@
               ],
               "compactMode": "DEFAULT",
               "displayName": "Table",
-              "bottomRow": 51,
+              "bottomRow": 69,
               "columnWidthMap": {
                 "task": 245,
                 "step": 62,
                 "status": 75,
-                "titulo": 597,
+                "titulo": 1062,
                 "id": 60
               },
               "parentRowSpace": 10,
@@ -162,7 +162,7 @@
                   "customAlias": "",
                   "buttonLabel": "Editar extrato\n",
                   "isDisabled": "",
-                  "onClick": "{{JSObject1.status_btn()}}"
+                  "onClick": "{{JSObject1.carregar_extrato()}}"
                 },
                 "titulo": {
                   "allowCellWrapping": false,
@@ -223,7 +223,7 @@
               },
               "key": "h0acl2dn39",
               "isDeprecated": false,
-              "rightColumn": 53,
+              "rightColumn": 64,
               "textSize": "0.875rem",
               "widgetId": "m4u4giefl5",
               "tableData": "{{appsmith.store.ProjetosTable}}",
@@ -248,8 +248,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 52,
-              "bottomRow": 56,
+              "topRow": 69,
+              "bottomRow": 73,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -260,7 +260,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 1,
+              "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -273,7 +273,7 @@
               "isDisabled": false,
               "key": "hvr04debhq",
               "isDeprecated": false,
-              "rightColumn": 10,
+              "rightColumn": 7,
               "isDefaultClickDisabled": true,
               "widgetId": "wr908s3vy0",
               "isVisible": true,
@@ -299,8 +299,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 52,
-              "bottomRow": 56,
+              "topRow": 69,
+              "bottomRow": 73,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -311,7 +311,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 10,
+              "leftColumn": 7,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -324,7 +324,7 @@
               "isDisabled": false,
               "key": "a9q7x4xwnj",
               "isDeprecated": false,
-              "rightColumn": 25,
+              "rightColumn": 16,
               "isDefaultClickDisabled": true,
               "widgetId": "kp9hfjzy9s",
               "isVisible": true,

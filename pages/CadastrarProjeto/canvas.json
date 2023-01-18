@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 630,
+          "bottomRow": 640,
           "containerStyle": "none",
           "snapRows": 60,
           "parentRowSpace": 1,
@@ -35,8 +35,8 @@
               "searchTags": [
                 "group"
               ],
-              "topRow": 4,
-              "bottomRow": 55,
+              "topRow": 5,
+              "bottomRow": 56,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
@@ -44,7 +44,7 @@
               "animateLoading": true,
               "parentColumnSpace": 17.9375,
               "dynamicTriggerPathList": [],
-              "leftColumn": 15,
+              "leftColumn": 20,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -77,15 +77,16 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 1,
+                      "topRow": 0,
                       "bottomRow": 5,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
+                      "shouldScrollContents": true,
                       "animateLoading": true,
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 16,
+                      "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -102,9 +103,9 @@
                       "text": "Cadastro de Projeto",
                       "key": "kvzyoaeroz",
                       "isDeprecated": false,
-                      "rightColumn": 49,
-                      "textAlign": "LEFT",
-                      "dynamicHeight": "AUTO_HEIGHT",
+                      "rightColumn": 64,
+                      "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "hxul6g8nb3",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -113,10 +114,8 @@
                       "parentId": "w7qwi5rf3m",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 0,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 6,
                       "fontSize": "1.25rem",
                       "minDynamicHeight": 4
                     },
@@ -477,15 +476,17 @@
               "key": "6020mn6w4y",
               "backgroundColor": "#FFFFFF",
               "isDeprecated": false,
-              "rightColumn": 39,
-              "dynamicHeight": "FIXED",
+              "rightColumn": 44,
+              "dynamicHeight": "AUTO_HEIGHT_WITH_LIMITS",
               "widgetId": "nmtaoqlbsu",
               "isVisible": true,
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "originalTopRow": 5,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "maxDynamicHeight": 9000,
+              "maxDynamicHeight": 53,
+              "originalBottomRow": 56,
               "minDynamicHeight": 10
             }
           ]

@@ -85,7 +85,7 @@
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 26,
+                      "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -102,8 +102,8 @@
                       "text": "RUBRICA",
                       "key": "9fjnhkd10z",
                       "isDeprecated": false,
-                      "rightColumn": 40,
-                      "textAlign": "LEFT",
+                      "rightColumn": 63,
+                      "textAlign": "CENTER",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "558v44syfw",
                       "isVisible": true,

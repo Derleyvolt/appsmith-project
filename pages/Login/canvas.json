@@ -51,7 +51,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 320,
+                  "bottomRow": 310,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -78,7 +78,7 @@
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 17,
+                      "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -95,7 +95,7 @@
                       "text": "FASTEF DIGITAL",
                       "key": "vpzqgg0o3j",
                       "isDeprecated": false,
-                      "rightColumn": 47,
+                      "rightColumn": 63,
                       "disableLink": false,
                       "textAlign": "CENTER",
                       "dynamicHeight": "AUTO_HEIGHT",
