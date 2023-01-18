@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tcadastrar_rubrica: async () => {\n\t\t\tawait CadastroRubricaAPI.run({ rubricaDados : {\"descricao\" : Input1.text} }).then(() => {\n\t\t\t\tshowAlert(\"Rubrica cadastrada\")\n\t\t\t\tnavigateTo(\"Extrato\")\n\t\t\t}).catch( () => {\n\t\t\t\t\t\t\tshowAlert(\"Erro ao criar rubrica\")\n\t\t\t})\n\t}\n}",
+    "body": "export default {\n\tcadastrar_rubrica: async () => {\n\t\t\tawait CadastroRubricaAPI.run({ rubricaDados : {\"descricao\" : Input1.text} }).then(() => {\n\t\t\t\tshowAlert(\"Rubrica cadastrada\")\n\t\t\t\tnavigateTo(\"Projetos\")\n\t\t\t}).catch( () => {\n\t\t\t\t\t\t\tshowAlert(\"Erro ao criar rubrica\")\n\t\t\t})\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },

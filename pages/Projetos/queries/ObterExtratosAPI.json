@@ -20,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/app/cadastrar/1/obter_extratos/",
+      "path": "/app/cadastrar/{{appsmith.store.id_projeto_atual}}/obter_extratos/",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
@@ -45,7 +45,9 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.store.id_projeto_atual"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
