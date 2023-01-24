@@ -19,12 +19,12 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "extrato => {\n  return {\n    \"id\": extrato.id,\n    \"tipo_mov\": extrato.id_movimentacao,\n    \"id_projeto\": extrato.id_projeto,\n    \"Rubrica\": extrato.id_rubrica,\n    \"Data\": extrato.data,\n    \"Valor\": extrato.valor,\n    \"Favorecido\": extrato.id_favorecido,\n    \"Tag\": extrato.id_tag,\n    \"obs\": extrato.observacao\n  };\n}",
+      "body": "async extrato => {\n  var data = appsmith.store.rubricas2;\n  var rubrica_desc;\n  data.some((e, idx) => {\n    if (e.indexOf(extrato.id_rubrica) != -1) {\n      var aux = data[idx].label;\n      rubrica_desc = data[idx].label.substr(aux.indexOf('- ') + 2);\n      return true;\n    }\n  });\n  await showAlert(rubrica_desc);\n  return {\n    \"id\": extrato.id,\n    \"tipo_mov\": extrato.id_movimentacao,\n    \"id_projeto\": extrato.id_projeto,\n    \"Rubrica\": extrato.id_rubrica,\n    \"Data\": extrato.data,\n    \"Valor\": extrato.valor,\n    \"Favorecido\": extrato.id_favorecido,\n    \"Tag\": extrato.id_tag,\n    \"obs\": extrato.observacao\n  };\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {}
       ],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "extrato => {\n  return {\n    \"id\": extrato.id,\n    \"tipo_mov\": extrato.id_movimentacao,\n    \"id_projeto\": extrato.id_projeto,\n    \"Rubrica\": extrato.id_rubrica,\n    \"Data\": extrato.data,\n    \"Valor\": extrato.valor,\n    \"Favorecido\": extrato.id_favorecido,\n    \"Tag\": extrato.id_tag,\n    \"obs\": extrato.observacao\n  };\n}"
+      "async extrato => {\n  var data = appsmith.store.rubricas2;\n  var rubrica_desc;\n  data.some((e, idx) => {\n    if (e.indexOf(extrato.id_rubrica) != -1) {\n      var aux = data[idx].label;\n      rubrica_desc = data[idx].label.substr(aux.indexOf('- ') + 2);\n      return true;\n    }\n  });\n  await showAlert(rubrica_desc);\n  return {\n    \"id\": extrato.id,\n    \"tipo_mov\": extrato.id_movimentacao,\n    \"id_projeto\": extrato.id_projeto,\n    \"Rubrica\": extrato.id_rubrica,\n    \"Data\": extrato.data,\n    \"Valor\": extrato.valor,\n    \"Favorecido\": extrato.id_favorecido,\n    \"Tag\": extrato.id_tag,\n    \"obs\": extrato.observacao\n  };\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

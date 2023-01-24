@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await storeValue(\"id_projeto_atual\", Table1.triggeredRow.id);\n  await ObterExtratosAPI.run().then(async res => {\n    if (res == undefined) {\n      await storeValue(\"extrato\", []);\n    } else {\n      let toModel = [];\n      res.forEach(e => {\n        toModel.push(JSObject1.parseJSON(e));\n        console.log(toModel[toModel.length - 1]);\n      });\n      await storeValue(\"extrato\", toModel);\n    }\n    navigateTo('Extrato');\n  }).catch(async () => {\n    await showAlert(\"Erro ao carregar extratos\");\n  });\n  return appsmith.store.extrato;\n}",
+      "body": "async () => {\n  await storeValue(\"id_projeto_atual\", Table1.triggeredRow.id);\n  await ObterExtratosAPI.run().then(async res => {\n    if (res == undefined) {\n      await storeValue(\"extrato\", []);\n    } else {\n      let toModel = [];\n      res.forEach(e => {\n        toModel.push(JSObject1.parseJSON(e));\n      });\n      await storeValue(\"extrato\", toModel);\n    }\n    navigateTo('Extrato');\n  }).catch(async () => {\n    await showAlert(\"Erro ao carregar extratos\");\n  });\n  return appsmith.store.extrato;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  await storeValue(\"id_projeto_atual\", Table1.triggeredRow.id);\n  await ObterExtratosAPI.run().then(async res => {\n    if (res == undefined) {\n      await storeValue(\"extrato\", []);\n    } else {\n      let toModel = [];\n      res.forEach(e => {\n        toModel.push(JSObject1.parseJSON(e));\n        console.log(toModel[toModel.length - 1]);\n      });\n      await storeValue(\"extrato\", toModel);\n    }\n    navigateTo('Extrato');\n  }).catch(async () => {\n    await showAlert(\"Erro ao carregar extratos\");\n  });\n  return appsmith.store.extrato;\n}"
+      "async () => {\n  await storeValue(\"id_projeto_atual\", Table1.triggeredRow.id);\n  await ObterExtratosAPI.run().then(async res => {\n    if (res == undefined) {\n      await storeValue(\"extrato\", []);\n    } else {\n      let toModel = [];\n      res.forEach(e => {\n        toModel.push(JSObject1.parseJSON(e));\n      });\n      await storeValue(\"extrato\", toModel);\n    }\n    navigateTo('Extrato');\n  }).catch(async () => {\n    await showAlert(\"Erro ao carregar extratos\");\n  });\n  return appsmith.store.extrato;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

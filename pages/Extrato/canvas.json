@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 74,
+          "version": 75,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -98,10 +98,14 @@
                 },
                 {
                   "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Documento.computedValue"
                 }
               ],
               "leftColumn": 0,
               "delimiter": ",",
+              "variant": "DEFAULT",
               "defaultSelectedRowIndex": 0,
               "showInlineEditingOptionDropdown": true,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -150,7 +154,8 @@
                 "Tag",
                 "obs",
                 "EditActions1",
-                "id"
+                "id",
+                "Documento"
               ],
               "dynamicPropertyPathList": [
                 {
@@ -160,7 +165,7 @@
                   "key": "primaryColumns.EditActions1.isDiscardDisabled"
                 }
               ],
-              "compactMode": "DEFAULT",
+              "compactMode": "SHORT",
               "displayName": "Table",
               "bottomRow": 59,
               "columnWidthMap": {
@@ -170,8 +175,10 @@
                 "id": 60,
                 "nome_funcionario": 191,
                 "quantidade_dias_trabalhados": 299,
-                "Data": 219,
-                "EditActions1": 453
+                "Data": 139,
+                "EditActions1": 173,
+                "Rubrica": 379,
+                "id_projeto": 100
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -183,6 +190,9 @@
                 },
                 {
                   "key": "primaryColumns.EditActions1.onSave"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.onDiscard"
                 }
               ],
               "borderWidth": "1",
@@ -194,7 +204,7 @@
                   "originalId": "id_projeto",
                   "id": "id_projeto",
                   "alias": "id_projeto",
-                  "horizontalAlignment": "LEFT",
+                  "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
                   "textColor": "",
@@ -240,7 +250,7 @@
                   "saveIconAlign": "left",
                   "discardIconAlign": "left",
                   "saveActionLabel": "Salvar",
-                  "discardActionLabel": "Descartar",
+                  "discardActionLabel": "Deletar",
                   "saveButtonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
                   "discardButtonColor": "#F22B2B",
                   "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
@@ -248,9 +258,11 @@
                   "discardButtonVariant": "TERTIARY",
                   "isSaveDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
                   "isDiscardDisabled": "false",
-                  "horizontalAlignment": "LEFT",
+                  "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
-                  "onSave": "{{JS_InsertRow.UpdateAndSave()}}"
+                  "onSave": "{{JS_InsertRow.UpdateAndSave()}}",
+                  "textSize": "0.875rem",
+                  "onDiscard": "{{JSObject1.eraseRow()}}"
                 },
                 "tipo_mov": {
                   "allowCellWrapping": false,
@@ -259,7 +271,7 @@
                   "originalId": "tipo_mov",
                   "id": "tipo_mov",
                   "alias": "tipo_mov",
-                  "horizontalAlignment": "LEFT",
+                  "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
                   "columnType": "select",
                   "textColor": "",
@@ -288,7 +300,7 @@
                   "originalId": "Rubrica",
                   "id": "Rubrica",
                   "alias": "Rubrica",
-                  "horizontalAlignment": "LEFT",
+                  "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
                   "columnType": "select",
                   "textColor": "",
@@ -308,7 +320,8 @@
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Rubrica\"]))}}",
                   "validation": {},
                   "cellBackground": "",
-                  "selectOptions": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.rubricas))}}"
+                  "selectOptions": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.rubricas2))}}",
+                  "isFilterable": true
                 },
                 "Data": {
                   "allowCellWrapping": false,
@@ -317,7 +330,7 @@
                   "originalId": "Data",
                   "id": "Data",
                   "alias": "Data",
-                  "horizontalAlignment": "LEFT",
+                  "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
                   "textColor": "",
@@ -345,7 +358,7 @@
                   "originalId": "Valor",
                   "id": "Valor",
                   "alias": "Valor",
-                  "horizontalAlignment": "LEFT",
+                  "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
                   "columnType": "number",
                   "textColor": "",
@@ -373,7 +386,7 @@
                   "originalId": "Favorecido",
                   "id": "Favorecido",
                   "alias": "Favorecido",
-                  "horizontalAlignment": "LEFT",
+                  "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
                   "columnType": "select",
                   "textColor": "",
@@ -402,7 +415,7 @@
                   "originalId": "Tag",
                   "id": "Tag",
                   "alias": "Tag",
-                  "horizontalAlignment": "LEFT",
+                  "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
                   "columnType": "select",
                   "textColor": "",
@@ -431,7 +444,7 @@
                   "originalId": "obs",
                   "id": "obs",
                   "alias": "obs",
-                  "horizontalAlignment": "LEFT",
+                  "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
                   "textColor": "",
@@ -454,12 +467,12 @@
                 },
                 "id": {
                   "allowCellWrapping": false,
-                  "index": 8,
+                  "index": 9,
                   "width": 150,
                   "originalId": "id",
                   "id": "id",
                   "alias": "id",
-                  "horizontalAlignment": "LEFT",
+                  "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
                   "columnType": "number",
                   "textColor": "",
@@ -479,6 +492,34 @@
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
                   "validation": {},
                   "cellBackground": ""
+                },
+                "Documento": {
+                  "allowCellWrapping": false,
+                  "index": 9,
+                  "width": 150,
+                  "originalId": "Documento",
+                  "id": "Documento",
+                  "alias": "Documento",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Documento",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Documento\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
               "key": "dbjhad4xem",
@@ -493,7 +534,7 @@
               "parentId": "0",
               "serverSidePaginationEnabled": false,
               "renderMode": "CANVAS",
-              "horizontalAlignment": "LEFT",
+              "horizontalAlignment": "CENTER",
               "isVisibleSearch": true,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"

@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Extrato",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\teraseRow: async () => {\n\t\t\tvar data = Table1.tableData;\n\t\t\tdata.splice(Table1.selectedRowIndex, 1);\n\t\t\tawait storeValue('extrato', data)\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Extrato_JSObject1",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63cf89c847460b73912587d0"
+}

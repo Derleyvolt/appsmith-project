@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 74,
+          "version": 75,
           "minHeight": 770,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -204,7 +204,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 20,
+                      "leftColumn": 22,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -214,7 +214,7 @@
                       "isDisabled": false,
                       "key": "3mpzfrgk2s",
                       "isDeprecated": false,
-                      "rightColumn": 41,
+                      "rightColumn": 43,
                       "isDefaultClickDisabled": true,
                       "widgetId": "sfp4mefxkj",
                       "isVisible": true,

@@ -21,7 +21,12 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "/app/cadastrar/{{appsmith.store.id_projeto_atual}}/obter_extratos/",
-      "headers": [],
+      "headers": [
+        {
+          "key": "Authorization",
+          "value": "Bearer {{appsmith.store.access_token}}"
+        }
+      ],
       "encodeParamsToggle": true,
       "queryParameters": [],
       "bodyFormData": [],
@@ -40,12 +45,16 @@
     "dynamicBindingPathList": [
       {
         "key": "path"
+      },
+      {
+        "key": "headers[0].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "appsmith.store.access_token",
       "appsmith.store.id_projeto_atual"
     ],
     "userSetOnLoad": false,

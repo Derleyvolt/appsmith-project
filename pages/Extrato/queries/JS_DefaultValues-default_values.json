@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  let extrato = appsmith.store.extrato;\n  let cur_date = new Date(Date.now());\n  let parsedDate = cur_date.toISOString();\n  parsedDate = parsedDate.substring(0, parsedDate.indexOf(\"T\"));\n  let id_projeto = appsmith.store.id_projeto_atual;\n  extrato.push({\n    \"tipo_mov\": \"\",\n    \"id_projeto\": id_projeto,\n    \"Rubrica\": \"\",\n    \"Data\": parsedDate,\n    \"Valor\": \"\",\n    \"Favorecido\": \"\",\n    \"Tag\": \"\",\n    \"obs\": \"\"\n  });\n  await storeValue(\"extrato\", extrato);\n}",
+      "body": "async () => {\n  let extrato = appsmith.store.extrato;\n  let cur_date = new Date(Date.now());\n  let parsedDate = cur_date.toISOString();\n  parsedDate = parsedDate.substring(0, parsedDate.indexOf(\"T\"));\n  let id_projeto = appsmith.store.id_projeto_atual;\n  extrato.push({\n    \"tipo_mov\": \"\",\n    \"id_projeto\": id_projeto,\n    \"Rubrica\": \"\",\n    \"Data\": parsedDate,\n    \"Valor\": \"\",\n    \"Favorecido\": \"\",\n    \"Documento\": \"\",\n    \"Tag\": \"\",\n    \"obs\": \"\"\n  });\n  await storeValue(\"extrato\", extrato);\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  let extrato = appsmith.store.extrato;\n  let cur_date = new Date(Date.now());\n  let parsedDate = cur_date.toISOString();\n  parsedDate = parsedDate.substring(0, parsedDate.indexOf(\"T\"));\n  let id_projeto = appsmith.store.id_projeto_atual;\n  extrato.push({\n    \"tipo_mov\": \"\",\n    \"id_projeto\": id_projeto,\n    \"Rubrica\": \"\",\n    \"Data\": parsedDate,\n    \"Valor\": \"\",\n    \"Favorecido\": \"\",\n    \"Tag\": \"\",\n    \"obs\": \"\"\n  });\n  await storeValue(\"extrato\", extrato);\n}"
+      "async () => {\n  let extrato = appsmith.store.extrato;\n  let cur_date = new Date(Date.now());\n  let parsedDate = cur_date.toISOString();\n  parsedDate = parsedDate.substring(0, parsedDate.indexOf(\"T\"));\n  let id_projeto = appsmith.store.id_projeto_atual;\n  extrato.push({\n    \"tipo_mov\": \"\",\n    \"id_projeto\": id_projeto,\n    \"Rubrica\": \"\",\n    \"Data\": parsedDate,\n    \"Valor\": \"\",\n    \"Favorecido\": \"\",\n    \"Documento\": \"\",\n    \"Tag\": \"\",\n    \"obs\": \"\"\n  });\n  await storeValue(\"extrato\", extrato);\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

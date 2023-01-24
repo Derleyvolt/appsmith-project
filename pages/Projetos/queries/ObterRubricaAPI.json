@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "ObterRubricasAPI",
+    "name": "ObterRubricaAPI",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -20,20 +20,10 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/app/cadastrar/listar_rubrica/",
-      "headers": [
-        {
-          "key": "Authorization",
-          "value": "Bearer {{appsmith.store.access_token}}"
-        },
-        {
-          "key": "content-type",
-          "value": "application/json"
-        }
-      ],
+      "path": "/app/cadastrar/{{appsmith.store.favorecido_id}}/obter_favorecido/",
+      "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "",
       "bodyFormData": [],
       "httpMethod": "GET",
       "selfReferencingDataPaths": [],
@@ -43,27 +33,27 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "headers[0].value"
+        "key": "path"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.access_token"
+      "appsmith.store.favorecido_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Projetos_ObterRubricasAPI",
+  "id": "Projetos_ObterRubricaAPI",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_63c6db1218e3f0482be65ced"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63d0046847460b739125940b"
 }

@@ -16,24 +16,14 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Projetos",
+    "pageId": "CadastrarRubrica",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "/app/cadastrar/listar_rubrica/",
-      "headers": [
-        {
-          "key": "Authorization",
-          "value": "Bearer {{appsmith.store.access_token}}"
-        },
-        {
-          "key": "content-type",
-          "value": "application/json"
-        }
-      ],
+      "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "",
       "bodyFormData": [],
       "httpMethod": "GET",
       "selfReferencingDataPaths": [],
@@ -43,27 +33,21 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "headers[0].value"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "appsmith.store.access_token"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Projetos_ObterRubricasAPI",
+  "id": "CadastrarRubrica_ObterRubricasAPI",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_63c6db1218e3f0482be65ced"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63ce247247460b7391256ec8"
 }

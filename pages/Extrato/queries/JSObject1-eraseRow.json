@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "cadastrar_rubrica",
-    "fullyQualifiedName": "JSObject1.cadastrar_rubrica",
+    "name": "eraseRow",
+    "fullyQualifiedName": "JSObject1.eraseRow",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,13 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "CadastrarRubrica",
-    "collectionId": "CadastrarRubrica_JSObject1",
+    "pageId": "Extrato",
+    "collectionId": "Extrato_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await CadastroRubricaAPI.run({\n    rubricaDados: {\n      \"descricao\": Input1.text\n    }\n  }).then(() => {\n    showAlert(\"Rubrica cadastrada\");\n    navigateTo(\"Projetos\");\n  }).catch(() => {\n    showAlert(\"Erro ao criar rubrica\");\n  });\n}",
+      "body": "async () => {\n  var data = Table1.tableData;\n  data.splice(Table1.selectedRowIndex, 1);\n  await storeValue('extrato', data);\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  await CadastroRubricaAPI.run({\n    rubricaDados: {\n      \"descricao\": Input1.text\n    }\n  }).then(() => {\n    showAlert(\"Rubrica cadastrada\");\n    navigateTo(\"Projetos\");\n  }).catch(() => {\n    showAlert(\"Erro ao criar rubrica\");\n  });\n}"
+      "async () => {\n  var data = Table1.tableData;\n  data.splice(Table1.selectedRowIndex, 1);\n  await storeValue('extrato', data);\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "CadastrarRubrica_JSObject1.cadastrar_rubrica",
+  "id": "Extrato_JSObject1.eraseRow",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_63c68273ff1c07648e0b4e87"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63cf89c847460b73912587cd"
 }
