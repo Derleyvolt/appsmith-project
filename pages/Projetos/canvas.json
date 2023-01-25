@@ -37,9 +37,6 @@
               "animateLoading": true,
               "dynamicBindingPathList": [
                 {
-                  "key": "primaryColumns.task.computedValue"
-                },
-                {
                   "key": "accentColor"
                 },
                 {
@@ -52,15 +49,6 @@
                   "key": "primaryColumns.titulo.computedValue"
                 },
                 {
-                  "key": "primaryColumns.task.buttonColor"
-                },
-                {
-                  "key": "primaryColumns.task.borderRadius"
-                },
-                {
-                  "key": "primaryColumns.task.boxShadow"
-                },
-                {
                   "key": "tableData"
                 },
                 {
@@ -68,6 +56,18 @@
                 },
                 {
                   "key": "primaryColumns.documento.computedValue"
+                },
+                {
+                  "key": "primaryColumns.tarefa.computedValue"
+                },
+                {
+                  "key": "primaryColumns.tarefa.buttonColor"
+                },
+                {
+                  "key": "primaryColumns.tarefa.borderRadius"
+                },
+                {
+                  "key": "primaryColumns.tarefa.boxShadow"
                 }
               ],
               "leftColumn": 0,
@@ -113,13 +113,9 @@
                 "titulo",
                 "coordenador",
                 "documento",
-                "task"
+                "tarefa"
               ],
-              "dynamicPropertyPathList": [
-                {
-                  "key": "primaryColumns.task.isDisabled"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "compactMode": "DEFAULT",
               "displayName": "Table",
               "bottomRow": 69,
@@ -136,39 +132,11 @@
               "parentColumnSpace": 17.9375,
               "dynamicTriggerPathList": [
                 {
-                  "key": "primaryColumns.task.onClick"
+                  "key": "primaryColumns.tarefa.onClick"
                 }
               ],
               "borderWidth": "1",
               "primaryColumns": {
-                "task": {
-                  "index": 1,
-                  "width": 150,
-                  "id": "task",
-                  "originalId": "task",
-                  "alias": "task",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "button",
-                  "textSize": "0.875rem",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isCellVisible": true,
-                  "isCellEditable": false,
-                  "isDerived": false,
-                  "label": "tarefa",
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
-                  "validation": {},
-                  "labelColor": "#FFFFFF",
-                  "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                  "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                  "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
-                  "customAlias": "",
-                  "buttonLabel": "Editar extrato\n",
-                  "isDisabled": "",
-                  "onClick": "{{JSObject1.carregar_extrato()}}"
-                },
                 "titulo": {
                   "allowCellWrapping": false,
                   "index": 3,
@@ -252,6 +220,40 @@
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"documento\"]))}}",
                   "validation": {},
                   "cellBackground": ""
+                },
+                "tarefa": {
+                  "allowCellWrapping": false,
+                  "index": 3,
+                  "width": 150,
+                  "originalId": "tarefa",
+                  "id": "tarefa",
+                  "alias": "tarefa",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "button",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "tarefa",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tarefa\"]))}}",
+                  "validation": {},
+                  "cellBackground": "",
+                  "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
+                  "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                  "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
+                  "customAlias": "",
+                  "buttonLabel": "Extrato",
+                  "onClick": "{{JSObject1.carregar_extrato()}}"
                 }
               },
               "key": "h0acl2dn39",
