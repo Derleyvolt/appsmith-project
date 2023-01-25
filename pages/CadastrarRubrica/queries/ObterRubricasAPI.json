@@ -21,7 +21,12 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "/app/cadastrar/listar_rubrica/",
-      "headers": [],
+      "headers": [
+        {
+          "key": "Authorization",
+          "value": "Bearer {{appsmith.store.access_token}}"
+        }
+      ],
       "encodeParamsToggle": true,
       "queryParameters": [],
       "bodyFormData": [],
@@ -37,11 +42,17 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "headers[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.store.access_token"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\t\tsend_credentials: async (username, password) => {\t\t\t\n\t\t\t\tlet res = await getLoginToken.run({ userdata : {'username' : username, 'password' : password} }).catch( () => {\n\t\t\t\t\t\tshowAlert(\"Login ou senha incorretos\")\n\t\t\t\t\t\treturn {}\n\t\t\t\t})\n\t\t\t\t\n\t\t\t\tif(res.hasOwnProperty('access')) {\n\t\t\t\t\t\treturn res\n\t\t\t\t}\n\t\t\t\n\t\t\t\treturn {}\n\t\t}\t\n}",
+    "body": "export default {\n\t\tsend_credentials: async (username, password) => {\t\t\t\n\t\t\t\tlet access = await getLoginToken.run({ userdata : {'username' : 'derley', 'password' : '123456'} }).catch( async () => {\n\t\t\t\t\t\tawait showAlert(\"Login ou senha incorretos\")\n\t\t\t\t\t\treturn undefined\n\t\t\t\t})\n\t\t\t\t\n\t\t\t\tif(access) {\n\t\t\t\t\t\treturn access;\n\t\t\t\t}\n\t\t\t\n\t\t\t\treturn undefined\n\t\t}\t\n}",
     "variables": [],
     "userPermissions": []
   },

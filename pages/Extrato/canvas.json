@@ -151,11 +151,11 @@
                 "Data",
                 "Valor",
                 "Favorecido",
+                "Documento",
                 "Tag",
                 "obs",
                 "EditActions1",
-                "id",
-                "Documento"
+                "id"
               ],
               "dynamicPropertyPathList": [
                 {
@@ -176,9 +176,10 @@
                 "nome_funcionario": 191,
                 "quantidade_dias_trabalhados": 299,
                 "Data": 139,
-                "EditActions1": 173,
+                "EditActions1": 160,
                 "Rubrica": 379,
-                "id_projeto": 100
+                "id_projeto": 100,
+                "obs": 279
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -467,7 +468,7 @@
                 },
                 "id": {
                   "allowCellWrapping": false,
-                  "index": 9,
+                  "index": 0,
                   "width": 150,
                   "originalId": "id",
                   "id": "id",

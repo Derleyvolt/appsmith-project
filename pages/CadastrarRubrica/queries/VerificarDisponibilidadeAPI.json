@@ -20,8 +20,13 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/app/cadastrar/{{appsmith.store.parsed_id}}/verificar_id_rubrica/",
-      "headers": [],
+      "path": "/app/cadastrar/130/verificar_id_rubrica/",
+      "headers": [
+        {
+          "key": "Authorization",
+          "value": "Bearer {{appsmith.store.access_token}}"
+        }
+      ],
       "encodeParamsToggle": true,
       "queryParameters": [],
       "bodyFormData": [],
@@ -40,13 +45,16 @@
     "dynamicBindingPathList": [
       {
         "key": "path"
+      },
+      {
+        "key": "headers[0].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.parsed_id"
+      "appsmith.store.access_token"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
