@@ -64,9 +64,6 @@
                   "key": "primaryColumns.EditActions1.isSaveDisabled"
                 },
                 {
-                  "key": "primaryColumns.tipo_mov.computedValue"
-                },
-                {
                   "key": "primaryColumns.Rubrica.computedValue"
                 },
                 {
@@ -88,19 +85,22 @@
                   "key": "primaryColumns.Rubrica.selectOptions"
                 },
                 {
-                  "key": "primaryColumns.tipo_mov.selectOptions"
-                },
-                {
                   "key": "primaryColumns.Favorecido.selectOptions"
                 },
                 {
                   "key": "primaryColumns.Tag.selectOptions"
                 },
                 {
+                  "key": "primaryColumns.Documento.computedValue"
+                },
+                {
+                  "key": "primaryColumns.tipo_mov.computedValue"
+                },
+                {
                   "key": "primaryColumns.id.computedValue"
                 },
                 {
-                  "key": "primaryColumns.Documento.computedValue"
+                  "key": "primaryColumns.tipo_mov.selectOptions"
                 }
               ],
               "leftColumn": 0,
@@ -176,10 +176,11 @@
                 "nome_funcionario": 191,
                 "quantidade_dias_trabalhados": 299,
                 "Data": 139,
-                "EditActions1": 160,
+                "EditActions1": 125,
                 "Rubrica": 379,
                 "id_projeto": 100,
-                "obs": 279
+                "obs": 224,
+                "Favorecido": 326
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -264,35 +265,6 @@
                   "onSave": "{{JS_InsertRow.UpdateAndSave()}}",
                   "textSize": "0.875rem",
                   "onDiscard": "{{JSObject1.eraseRow()}}"
-                },
-                "tipo_mov": {
-                  "allowCellWrapping": false,
-                  "index": 1,
-                  "width": 150,
-                  "originalId": "tipo_mov",
-                  "id": "tipo_mov",
-                  "alias": "tipo_mov",
-                  "horizontalAlignment": "CENTER",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "select",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": true,
-                  "isEditable": true,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "tipo_mov",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tipo_mov\"]))}}",
-                  "validation": {},
-                  "cellBackground": "",
-                  "selectOptions": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.movimentacoes))}}"
                 },
                 "Rubrica": {
                   "allowCellWrapping": false,
@@ -466,34 +438,6 @@
                   "validation": {},
                   "cellBackground": ""
                 },
-                "id": {
-                  "allowCellWrapping": false,
-                  "index": 0,
-                  "width": 150,
-                  "originalId": "id",
-                  "id": "id",
-                  "alias": "id",
-                  "horizontalAlignment": "CENTER",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "number",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "id",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
-                  "validation": {},
-                  "cellBackground": ""
-                },
                 "Documento": {
                   "allowCellWrapping": false,
                   "index": 9,
@@ -519,6 +463,63 @@
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Documento\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "tipo_mov": {
+                  "allowCellWrapping": false,
+                  "index": 9,
+                  "width": 150,
+                  "originalId": "tipo_mov",
+                  "id": "tipo_mov",
+                  "alias": "tipo_mov",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "select",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "tipo_mov",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tipo_mov\"]))}}",
+                  "validation": {},
+                  "cellBackground": "",
+                  "selectOptions": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.store.movimentacoes))}}"
+                },
+                "id": {
+                  "allowCellWrapping": false,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "id",
+                  "id": "id",
+                  "alias": "id",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
                   "validation": {},
                   "cellBackground": ""
                 }

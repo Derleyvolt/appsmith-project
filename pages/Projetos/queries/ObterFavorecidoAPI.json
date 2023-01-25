@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "ObterRubricaAPI",
+    "name": "ObterFavorecidoAPI",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -23,6 +23,7 @@
       "path": "/app/cadastrar/{{appsmith.store.favorecido_id}}/obter_favorecido/",
       "headers": [
         {
+          "key": "Authorization",
           "value": "Bearer {{appsmith.store.access_token}}"
         }
       ],
@@ -61,7 +62,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Projetos_ObterRubricaAPI",
+  "id": "Projetos_ObterFavorecidoAPI",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_63d0046847460b739125940b"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63d0d8c6516f8c24ae463864"
 }

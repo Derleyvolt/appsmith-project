@@ -30,7 +30,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 1,
+              "topRow": 0,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -61,10 +61,13 @@
                   "key": "primaryColumns.task.boxShadow"
                 },
                 {
-                  "key": "primaryColumns.id.computedValue"
+                  "key": "tableData"
                 },
                 {
-                  "key": "tableData"
+                  "key": "primaryColumns.coordenador.computedValue"
+                },
+                {
+                  "key": "primaryColumns.documento.computedValue"
                 }
               ],
               "leftColumn": 0,
@@ -107,8 +110,9 @@
               "widgetName": "Table1",
               "defaultPageSize": 0,
               "columnOrder": [
-                "id",
                 "titulo",
+                "coordenador",
+                "documento",
                 "task"
               ],
               "dynamicPropertyPathList": [
@@ -123,8 +127,9 @@
                 "task": 245,
                 "step": 62,
                 "status": 75,
-                "titulo": 1062,
-                "id": 60
+                "titulo": 510,
+                "id": 60,
+                "coordenador": 381
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -152,7 +157,7 @@
                   "isCellVisible": true,
                   "isCellEditable": false,
                   "isDerived": false,
-                  "label": "task",
+                  "label": "tarefa",
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
                   "validation": {},
                   "labelColor": "#FFFFFF",
@@ -192,13 +197,13 @@
                   "validation": {},
                   "cellBackground": ""
                 },
-                "id": {
+                "coordenador": {
                   "allowCellWrapping": false,
-                  "index": 0,
+                  "index": 2,
                   "width": 150,
-                  "originalId": "id",
-                  "id": "id",
-                  "alias": "id",
+                  "originalId": "coordenador",
+                  "id": "coordenador",
+                  "alias": "coordenador",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
@@ -207,16 +212,44 @@
                   "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": false,
+                  "isVisible": true,
                   "isDisabled": false,
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "id",
+                  "label": "coordenador",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"coordenador\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "documento": {
+                  "allowCellWrapping": false,
+                  "index": 3,
+                  "width": 150,
+                  "originalId": "documento",
+                  "id": "documento",
+                  "alias": "documento",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "documento",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"documento\"]))}}",
                   "validation": {},
                   "cellBackground": ""
                 }
@@ -443,7 +476,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async () => {\n  let data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  for (var i = 0; i < data.length; i++) {\n    data[i].task = \"\";\n  }\n  await storeValue(\"ProjetosTable\", data);\n}"
+                "async () => {\n  var data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  var tableData = [];\n  for (var i = 0; i < data.length; i++) {\n    var doc = data[i].cpf_coordenador.length > 0 ? data[i].cpf_coordenador : data[i].cnpj_coordenador;\n    tableData.push({\n      titulo: data[i].titulo,\n      coordenador: data[i].nome_coordenador,\n      documento: doc,\n      tarefa: ''\n    });\n  }\n  await storeValue(\"ProjetosTable\", tableData);\n}"
               ],
               "timeoutInMillisecond": 10000
             },

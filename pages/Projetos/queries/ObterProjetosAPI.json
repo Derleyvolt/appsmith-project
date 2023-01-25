@@ -20,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/app/cadastrar/obter_tudo_minimal/",
+      "path": "/app/cadastrar/obter_tudo/",
       "headers": [
         {
           "key": "Authorization",
