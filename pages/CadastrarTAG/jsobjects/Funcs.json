@@ -1,6 +1,6 @@
 {
   "unpublishedCollection": {
-    "name": "JSObject1",
+    "name": "Funcs",
     "pageId": "CadastrarTAG",
     "pluginId": "js-plugin",
     "pluginType": "JS",
@@ -10,7 +10,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "CadastrarTAG_JSObject1",
+  "id": "CadastrarTAG_Funcs",
   "deleted": false,
   "gitSyncId": "637d55b1cbb10813d213d9ed_63c68a1608b52d06b80a0e1d"
 }
