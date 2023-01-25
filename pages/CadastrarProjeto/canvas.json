@@ -382,7 +382,7 @@
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "{{appsmith.store.favorecidos}}",
+                      "options": "{{appsmith.store.favorecidosCP}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "t1m5eoky4p",
@@ -437,7 +437,7 @@
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "{{appsmith.store.favorecidos}}",
+                      "options": "{{appsmith.store.favorecidosCP}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "lgs5uvgn9w",
@@ -491,7 +491,21 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "CadastrarProjeto_CriarProjetoJS.Background",
+              "name": "CriarProjetoJS.Background",
+              "collectionId": "CadastrarProjeto_CriarProjetoJS",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  var favorecidos = await CarregarFavorecidosAPI.run().catch(async () => {\n    await showAlert('Ocorreu algum erro ao carregar os favorecidos');\n  });\n  var select_data = [];\n  for (var e of favorecidos) {\n    select_data.push({\n      label: e.nome,\n      value: e.id\n    });\n  }\n  await storeValue('favorecidosCP', select_data);\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "CadastrarProjeto",

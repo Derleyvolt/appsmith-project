@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  var data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  var tableData = [];\n  for (var i = 0; i < data.length; i++) {\n    var doc = data[i].cpf_coordenador.length > 0 ? data[i].cpf_coordenador : data[i].cnpj_coordenador;\n    tableData.push({\n      titulo: data[i].titulo,\n      coordenador: data[i].nome_coordenador,\n      documento: doc,\n      tarefa: ''\n    });\n  }\n  await storeValue(\"ProjetosTable\", tableData);\n}",
+      "body": "async () => {\n  var data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  var tableData = [];\n  for (var i = 0; i < data.length; i++) {\n    var doc = data[i].cpf_coordenador.length > 0 ? data[i].cpf_coordenador : data[i].cnpj_coordenador;\n    tableData.push({\n      id: data[i].id,\n      titulo: data[i].titulo,\n      coordenador: data[i].nome_coordenador,\n      documento: doc,\n      tarefa: ''\n    });\n  }\n  await storeValue(\"ProjetosTable\", tableData);\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  var data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  var tableData = [];\n  for (var i = 0; i < data.length; i++) {\n    var doc = data[i].cpf_coordenador.length > 0 ? data[i].cpf_coordenador : data[i].cnpj_coordenador;\n    tableData.push({\n      titulo: data[i].titulo,\n      coordenador: data[i].nome_coordenador,\n      documento: doc,\n      tarefa: ''\n    });\n  }\n  await storeValue(\"ProjetosTable\", tableData);\n}"
+      "async () => {\n  var data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  var tableData = [];\n  for (var i = 0; i < data.length; i++) {\n    var doc = data[i].cpf_coordenador.length > 0 ? data[i].cpf_coordenador : data[i].cnpj_coordenador;\n    tableData.push({\n      id: data[i].id,\n      titulo: data[i].titulo,\n      coordenador: data[i].nome_coordenador,\n      documento: doc,\n      tarefa: ''\n    });\n  }\n  await storeValue(\"ProjetosTable\", tableData);\n}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,

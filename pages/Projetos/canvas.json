@@ -68,6 +68,9 @@
                 },
                 {
                   "key": "primaryColumns.tarefa.boxShadow"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
                 }
               ],
               "leftColumn": 0,
@@ -113,7 +116,8 @@
                 "titulo",
                 "coordenador",
                 "documento",
-                "tarefa"
+                "tarefa",
+                "id"
               ],
               "dynamicPropertyPathList": [],
               "compactMode": "DEFAULT",
@@ -254,6 +258,34 @@
                   "customAlias": "",
                   "buttonLabel": "Extrato",
                   "onClick": "{{JSObject1.carregar_extrato()}}"
+                },
+                "id": {
+                  "allowCellWrapping": false,
+                  "index": 4,
+                  "width": 150,
+                  "originalId": "id",
+                  "id": "id",
+                  "alias": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
               "key": "h0acl2dn39",
@@ -478,7 +510,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async () => {\n  var data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  var tableData = [];\n  for (var i = 0; i < data.length; i++) {\n    var doc = data[i].cpf_coordenador.length > 0 ? data[i].cpf_coordenador : data[i].cnpj_coordenador;\n    tableData.push({\n      titulo: data[i].titulo,\n      coordenador: data[i].nome_coordenador,\n      documento: doc,\n      tarefa: ''\n    });\n  }\n  await storeValue(\"ProjetosTable\", tableData);\n}"
+                "async () => {\n  var data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  var tableData = [];\n  for (var i = 0; i < data.length; i++) {\n    var doc = data[i].cpf_coordenador.length > 0 ? data[i].cpf_coordenador : data[i].cnpj_coordenador;\n    tableData.push({\n      id: data[i].id,\n      titulo: data[i].titulo,\n      coordenador: data[i].nome_coordenador,\n      documento: doc,\n      tarefa: ''\n    });\n  }\n  await storeValue(\"ProjetosTable\", tableData);\n}"
               ],
               "timeoutInMillisecond": 10000
             },

@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "ObterExtratosAPI",
+    "name": "CarregarFavorecidosAPI",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -16,24 +16,19 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Projetos",
+    "pageId": "CadastrarProjeto",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/app/cadastrar/{{appsmith.store.id_projeto_atual}}/obter_extratos/",
+      "path": "/app/cadastrar/obter_tudo_favorecido/",
       "headers": [
         {
           "key": "Authorization",
           "value": "Bearer {{appsmith.store.access_token}}"
-        },
-        {
-          "key": "content-type",
-          "value": "application/json"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "",
       "bodyFormData": [],
       "httpMethod": "GET",
       "selfReferencingDataPaths": [],
@@ -43,14 +38,11 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
-      {
-        "key": "path"
-      },
       {
         "key": "headers[0].value"
       }
@@ -59,15 +51,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.access_token",
-      "appsmith.store.id_projeto_atual"
+      "appsmith.store.access_token"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Projetos_ObterExtratosAPI",
+  "id": "CadastrarProjeto_CarregarFavorecidosAPI",
   "deleted": false,
-  "gitSyncId": "637d55b1cbb10813d213d9ed_63c732d17a37c13f6f084604"
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63d0e1d5af0003311d22ffc2"
 }

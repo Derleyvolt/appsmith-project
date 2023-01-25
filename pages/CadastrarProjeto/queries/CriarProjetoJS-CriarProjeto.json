@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await CriarProjetoAPI.run({\n    projetoDados: {\n      'titulo': Input1.text,\n      'contrato': Input2.text,\n      'num_sap': Input3.text,\n      'id_coordenador': Select1.selectedOptionValue,\n      'id_proponente': Select2.selectedOptionValue,\n      'id_usuario': appsmith.store.user_id\n    }\n  }).then(res => {\n    showAlert(res);\n    navigateTo(\"Projetos\");\n  }).catch(() => {\n    showAlert(\"Erro ao criar projeto\");\n  });\n}",
+      "body": "async () => {\n  console.log({\n    projetoDados: {\n      titulo: Input1.text,\n      contrato: Input2.text,\n      num_sap: Input3.text,\n      id_coordenador: Select1.selectedOptionValue,\n      id_proponente: Select2.selectedOptionValue,\n      id_usuario: appsmith.store.user_id\n    }\n  });\n  await CriarProjetoAPI.run({\n    projetoDados: {\n      titulo: Input1.text,\n      contrato: Input2.text,\n      num_sap: Input3.text,\n      id_coordenador: Select1.selectedOptionValue,\n      id_proponente: Select2.selectedOptionValue,\n      id_usuario: appsmith.store.user_id\n    }\n  }).then(async res => {\n    await showAlert(res);\n    navigateTo(\"Projetos\");\n  }).catch(async () => {\n    await showAlert(\"Erro ao criar projeto\");\n  });\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  await CriarProjetoAPI.run({\n    projetoDados: {\n      'titulo': Input1.text,\n      'contrato': Input2.text,\n      'num_sap': Input3.text,\n      'id_coordenador': Select1.selectedOptionValue,\n      'id_proponente': Select2.selectedOptionValue,\n      'id_usuario': appsmith.store.user_id\n    }\n  }).then(res => {\n    showAlert(res);\n    navigateTo(\"Projetos\");\n  }).catch(() => {\n    showAlert(\"Erro ao criar projeto\");\n  });\n}"
+      "async () => {\n  console.log({\n    projetoDados: {\n      titulo: Input1.text,\n      contrato: Input2.text,\n      num_sap: Input3.text,\n      id_coordenador: Select1.selectedOptionValue,\n      id_proponente: Select2.selectedOptionValue,\n      id_usuario: appsmith.store.user_id\n    }\n  });\n  await CriarProjetoAPI.run({\n    projetoDados: {\n      titulo: Input1.text,\n      contrato: Input2.text,\n      num_sap: Input3.text,\n      id_coordenador: Select1.selectedOptionValue,\n      id_proponente: Select2.selectedOptionValue,\n      id_usuario: appsmith.store.user_id\n    }\n  }).then(async res => {\n    await showAlert(res);\n    navigateTo(\"Projetos\");\n  }).catch(async () => {\n    await showAlert(\"Erro ao criar projeto\");\n  });\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
