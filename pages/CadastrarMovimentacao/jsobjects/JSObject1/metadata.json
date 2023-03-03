@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "CadastrarMovimentacao",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "CadastrarMovimentacao_JSObject1",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_640195fb8a12fa7e07dea8d3"
+}

@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "InsertAndSaveRow",
+    "pageId": "Extrato",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Extrato_InsertAndSaveRow",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639acc1f5b4b533c8eaa7fe1"
+}

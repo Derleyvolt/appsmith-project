@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Funcs",
+    "pageId": "CadastrarRubrica",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "CadastrarRubrica_Funcs",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63c68273ff1c07648e0b4e89"
+}

@@ -21,12 +21,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "/app/cadastrar/listar_tag/",
-      "headers": [
-        {
-          "key": "Authorization",
-          "value": "Bearer {{appsmith.store.access_token}}"
-        }
-      ],
+      "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
       "bodyFormData": [],
@@ -42,17 +37,11 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "headers[0].value"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "appsmith.store.access_token"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

@@ -23,10 +23,6 @@
       "path": "",
       "headers": [
         {
-          "key": "Authorization",
-          "value": "Bearer {{appsmith.store.access_token}}"
-        },
-        {
           "key": "content-type",
           "value": "application/json"
         }
@@ -50,16 +46,12 @@
     "dynamicBindingPathList": [
       {
         "key": "body"
-      },
-      {
-        "key": "headers[0].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.access_token",
       "this.params.ExtratoDados"
     ],
     "userSetOnLoad": false,

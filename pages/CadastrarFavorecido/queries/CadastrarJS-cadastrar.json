@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await CadastroAPI.run({\n    FavorecidoDados: {\n      'nome': Input1.text,\n      'cpf': Input2.text,\n      'cnpj': Input3.text\n    }\n  }).then(res => {\n    showAlert(res);\n    navigateTo(\"Projetos\");\n  }).catch(() => {\n    showAlert(\"Erro ao criar favorecido\");\n  });\n}",
+      "body": "async () => {\n  await CadastroAPI.run({\n    FavorecidoDados: {\n      'nome': Input1.text,\n      'cpf': Input2.text,\n      'cnpj': Input3.text\n    }\n  }).then(res => {\n    showAlert(res);\n  }).catch(() => {\n    showAlert(\"Erro ao criar favorecido\");\n  });\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  await CadastroAPI.run({\n    FavorecidoDados: {\n      'nome': Input1.text,\n      'cpf': Input2.text,\n      'cnpj': Input3.text\n    }\n  }).then(res => {\n    showAlert(res);\n    navigateTo(\"Projetos\");\n  }).catch(() => {\n    showAlert(\"Erro ao criar favorecido\");\n  });\n}"
+      "async () => {\n  await CadastroAPI.run({\n    FavorecidoDados: {\n      'nome': Input1.text,\n      'cpf': Input2.text,\n      'cnpj': Input3.text\n    }\n  }).then(res => {\n    showAlert(res);\n  }).catch(() => {\n    showAlert(\"Erro ao criar favorecido\");\n  });\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

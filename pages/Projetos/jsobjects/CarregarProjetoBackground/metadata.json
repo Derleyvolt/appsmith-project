@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "CarregarProjetoBackground",
+    "pageId": "Projetos",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Projetos_CarregarProjetoBackground",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63b793f860108a1256293750"
+}

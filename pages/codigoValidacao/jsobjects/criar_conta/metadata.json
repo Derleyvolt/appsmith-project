@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "criar_conta",
+    "pageId": "codigoValidacao",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "codigoValidacao_criar_conta",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63f70435ef7de7148bd8c411"
+}

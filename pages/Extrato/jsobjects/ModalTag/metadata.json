@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "ModalTag",
+    "pageId": "Extrato",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Extrato_ModalTag",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639ac63303959a6b55a239b9"
+}

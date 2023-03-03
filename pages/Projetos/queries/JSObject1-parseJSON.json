@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "extrato => {\n  var data = appsmith.store.rubricas2;\n  var rubrica_desc;\n  data.some((e, idx) => {\n    if (e.label.indexOf(extrato.id_rubrica) != -1) {\n      rubrica_desc = data[idx].label;\n      return true;\n    }\n  });\n  var {cpf, cnpj, nome, id: id_fav} = appsmith.store.AllFavorecidos.find(e => e.id == extrato.id_favorecido);\n  return {\n    \"id\": extrato.id,\n    \"tipo_mov\": extrato.id_movimentacao,\n    \"id_projeto\": extrato.id_projeto,\n    \"Rubrica\": rubrica_desc,\n    \"Data\": extrato.data,\n    \"Valor\": extrato.valor,\n    \"Favorecido\": id_fav + ' - ' + nome,\n    \"Documento\": cpf.length > 0 ? cpf : cnpj,\n    \"Tag\": extrato.id_tag,\n    \"obs\": extrato.observacao\n  };\n}",
+      "body": "extrato => {\n  var data = appsmith.store.rubricas2;\n  var rubrica_desc;\n  data.some((e, idx) => {\n    if (e.label.indexOf(extrato.id_rubrica) != -1) {\n      rubrica_desc = data[idx].label;\n      return true;\n    }\n  });\n  var {cpf, cnpj, nome, id: id_fav} = appsmith.store.AllFavorecidos.find(e => e.id == extrato.id_favorecido);\n  return {\n    \"id\": extrato.id,\n    \"tipo_mov\": extrato.id_movimentacao,\n    \"id_projeto\": extrato.id_projeto,\n    \"Rubrica\": rubrica_desc,\n    \"Data\": extrato.data,\n    \"Valor\": extrato.valor,\n    \"Favorecido\": id_fav + ' - ' + nome,\n    \"Documento\": cpf.length > 0 ? cpf : cnpj,\n    \"Tag\": extrato.tags.join(),\n    \"obs\": extrato.observacao,\n    \"dataDocumento\": extrato.data_documento,\n    \"dataPagamento\": extrato.data_pagamento\n  };\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {}
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "extrato => {\n  var data = appsmith.store.rubricas2;\n  var rubrica_desc;\n  data.some((e, idx) => {\n    if (e.label.indexOf(extrato.id_rubrica) != -1) {\n      rubrica_desc = data[idx].label;\n      return true;\n    }\n  });\n  var {cpf, cnpj, nome, id: id_fav} = appsmith.store.AllFavorecidos.find(e => e.id == extrato.id_favorecido);\n  return {\n    \"id\": extrato.id,\n    \"tipo_mov\": extrato.id_movimentacao,\n    \"id_projeto\": extrato.id_projeto,\n    \"Rubrica\": rubrica_desc,\n    \"Data\": extrato.data,\n    \"Valor\": extrato.valor,\n    \"Favorecido\": id_fav + ' - ' + nome,\n    \"Documento\": cpf.length > 0 ? cpf : cnpj,\n    \"Tag\": extrato.id_tag,\n    \"obs\": extrato.observacao\n  };\n}"
+      "extrato => {\n  var data = appsmith.store.rubricas2;\n  var rubrica_desc;\n  data.some((e, idx) => {\n    if (e.label.indexOf(extrato.id_rubrica) != -1) {\n      rubrica_desc = data[idx].label;\n      return true;\n    }\n  });\n  var {cpf, cnpj, nome, id: id_fav} = appsmith.store.AllFavorecidos.find(e => e.id == extrato.id_favorecido);\n  return {\n    \"id\": extrato.id,\n    \"tipo_mov\": extrato.id_movimentacao,\n    \"id_projeto\": extrato.id_projeto,\n    \"Rubrica\": rubrica_desc,\n    \"Data\": extrato.data,\n    \"Valor\": extrato.valor,\n    \"Favorecido\": id_fav + ' - ' + nome,\n    \"Documento\": cpf.length > 0 ? cpf : cnpj,\n    \"Tag\": extrato.tags.join(),\n    \"obs\": extrato.observacao,\n    \"dataDocumento\": extrato.data_documento,\n    \"dataPagamento\": extrato.data_pagamento\n  };\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

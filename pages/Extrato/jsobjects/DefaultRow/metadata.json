@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "DefaultRow",
+    "pageId": "Extrato",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Extrato_DefaultRow",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639085d0cdae3243e1bab3b4"
+}

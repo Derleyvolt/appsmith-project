@@ -31,6 +31,14 @@
     {
       "id": "CadastrarTAG",
       "isDefault": false
+    },
+    {
+      "id": "codigoValidacao",
+      "isDefault": false
+    },
+    {
+      "id": "CadastrarMovimentacao",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -43,6 +51,7 @@
   "publishedAppLayout": {
     "type": "FLUID"
   },
+  "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
   "applicationVersion": 2,
   "isManualUpdate": false,

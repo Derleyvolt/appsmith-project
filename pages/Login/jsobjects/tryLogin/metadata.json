@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "tryLogin",
+    "pageId": "Login",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Login_tryLogin",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_639b4656749a014ec6e5243e"
+}

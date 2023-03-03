@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 810,
+          "bottomRow": 730,
           "containerStyle": "none",
           "snapRows": 76,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 75,
+          "version": 77,
           "minHeight": 770,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -49,7 +49,7 @@
                   "key": "primaryColumns.titulo.computedValue"
                 },
                 {
-                  "key": "tableData"
+                  "key": "primaryColumns.id.computedValue"
                 },
                 {
                   "key": "primaryColumns.coordenador.computedValue"
@@ -70,12 +70,34 @@
                   "key": "primaryColumns.tarefa.boxShadow"
                 },
                 {
-                  "key": "primaryColumns.id.computedValue"
+                  "key": "primaryColumns.EditActions1.saveButtonColor"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.saveBorderRadius"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.discardBorderRadius"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.isSaveDisabled"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.isDiscardDisabled"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.vigenciaInicial.computedValue"
+                },
+                {
+                  "key": "primaryColumns.vigenciaFinal.computedValue"
                 }
               ],
               "leftColumn": 0,
               "delimiter": ",",
               "defaultSelectedRowIndex": 0,
+              "showInlineEditingOptionDropdown": true,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisibleFilters": false,
               "isVisible": true,
@@ -107,6 +129,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "columnUpdatedAt": 1677820302192,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -114,12 +137,22 @@
               "defaultPageSize": 0,
               "columnOrder": [
                 "titulo",
+                "id",
                 "coordenador",
                 "documento",
                 "tarefa",
-                "id"
+                "EditActions1",
+                "vigenciaInicial",
+                "vigenciaFinal"
               ],
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "primaryColumns.EditActions1.isSaveDisabled"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.isDiscardDisabled"
+                }
+              ],
               "compactMode": "DEFAULT",
               "displayName": "Table",
               "bottomRow": 69,
@@ -127,9 +160,14 @@
                 "task": 245,
                 "step": 62,
                 "status": 75,
-                "titulo": 510,
+                "titulo": 338,
                 "id": 60,
-                "coordenador": 381
+                "coordenador": 186,
+                "tarefa": 125,
+                "dataFinal": 171,
+                "documento": 185,
+                "dataInicial": 210,
+                "vigenciaInicial": 207
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -167,7 +205,37 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"titulo\"]))}}",
                   "validation": {},
-                  "cellBackground": ""
+                  "cellBackground": "",
+                  "sticky": ""
+                },
+                "id": {
+                  "allowCellWrapping": false,
+                  "index": 4,
+                  "width": 150,
+                  "originalId": "id",
+                  "id": "id",
+                  "alias": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                  "validation": {},
+                  "cellBackground": "",
+                  "sticky": ""
                 },
                 "coordenador": {
                   "allowCellWrapping": false,
@@ -195,7 +263,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"coordenador\"]))}}",
                   "validation": {},
-                  "cellBackground": ""
+                  "cellBackground": "",
+                  "sticky": ""
                 },
                 "documento": {
                   "allowCellWrapping": false,
@@ -223,11 +292,12 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"documento\"]))}}",
                   "validation": {},
-                  "cellBackground": ""
+                  "cellBackground": "",
+                  "sticky": ""
                 },
                 "tarefa": {
                   "allowCellWrapping": false,
-                  "index": 3,
+                  "index": 4,
                   "width": 150,
                   "originalId": "tarefa",
                   "id": "tarefa",
@@ -256,22 +326,21 @@
                   "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
                   "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
                   "customAlias": "",
-                  "buttonLabel": "Extrato",
-                  "onClick": "{{JSObject1.carregar_extrato()}}"
+                  "onClick": "{{JSObject1.carregar_extrato()}}",
+                  "buttonLabel": "Editar Extrato",
+                  "sticky": ""
                 },
-                "id": {
+                "EditActions1": {
                   "allowCellWrapping": false,
-                  "index": 4,
+                  "index": 7,
                   "width": 150,
-                  "originalId": "id",
-                  "id": "id",
-                  "alias": "id",
+                  "originalId": "EditActions1",
+                  "id": "EditActions1",
+                  "alias": "EditActions1",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "number",
-                  "textColor": "",
+                  "columnType": "editActions",
                   "textSize": "0.875rem",
-                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": false,
@@ -279,16 +348,87 @@
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "id",
+                  "isDerived": true,
+                  "label": "Save / Discard",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                  "computedValue": "",
+                  "validation": {},
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "saveIconAlign": "left",
+                  "discardIconAlign": "left",
+                  "saveActionLabel": "Save",
+                  "discardActionLabel": "Discard",
+                  "saveButtonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
+                  "discardButtonColor": "#F22B2B",
+                  "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                  "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                  "discardButtonVariant": "TERTIARY",
+                  "isSaveDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+                  "isDiscardDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+                  "sticky": ""
+                },
+                "vigenciaInicial": {
+                  "allowCellWrapping": false,
+                  "index": 5,
+                  "width": 150,
+                  "originalId": "vigenciaInicial",
+                  "id": "vigenciaInicial",
+                  "alias": "vigenciaInicial",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "vigenciaInicial",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vigenciaInicial\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "vigenciaFinal": {
+                  "allowCellWrapping": false,
+                  "index": 6,
+                  "width": 150,
+                  "originalId": "vigenciaFinal",
+                  "id": "vigenciaFinal",
+                  "alias": "vigenciaFinal",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "vigenciaFinal",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vigenciaFinal\"]))}}",
+                  "sticky": "",
                   "validation": {},
                   "cellBackground": ""
                 }
               },
               "key": "h0acl2dn39",
+              "canFreezeColumn": false,
               "isDeprecated": false,
               "rightColumn": 64,
               "textSize": "0.875rem",
@@ -359,7 +499,7 @@
               "boxShadow": "none",
               "widgetName": "Button2",
               "onClick": "{{navigateTo('CadastrarFavorecido', {}, 'SAME_WINDOW')}}",
-              "buttonColor": "#eab308",
+              "buttonColor": "#dc2626",
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
               "searchTags": [
@@ -384,7 +524,7 @@
                   "key": "borderRadius"
                 }
               ],
-              "text": "Cadastrar favorecido",
+              "text": "Cadastrar Favorecido",
               "isDisabled": false,
               "key": "a9q7x4xwnj",
               "isDeprecated": false,
@@ -399,7 +539,7 @@
               "isLoading": false,
               "disabledWhenInvalid": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "buttonVariant": "PRIMARY",
+              "buttonVariant": "SECONDARY",
               "placement": "CENTER"
             },
             {
@@ -407,7 +547,7 @@
               "boxShadow": "none",
               "widgetName": "Button3",
               "onClick": "{{navigateTo('CadastrarRubrica', {}, 'SAME_WINDOW')}}",
-              "buttonColor": "#eab308",
+              "buttonColor": "#dc2626",
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
               "searchTags": [
@@ -447,7 +587,7 @@
               "isLoading": false,
               "disabledWhenInvalid": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "buttonVariant": "PRIMARY",
+              "buttonVariant": "SECONDARY",
               "placement": "CENTER"
             },
             {
@@ -455,7 +595,7 @@
               "boxShadow": "none",
               "widgetName": "Button4",
               "onClick": "{{navigateTo('CadastrarTAG', {}, 'SAME_WINDOW')}}",
-              "buttonColor": "#eab308",
+              "buttonColor": "#dc2626",
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
               "searchTags": [
@@ -495,6 +635,102 @@
               "isLoading": false,
               "disabledWhenInvalid": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "SECONDARY",
+              "placement": "CENTER"
+            },
+            {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
+              "widgetName": "Button5",
+              "onClick": "{{navigateTo('CadastrarMovimentacao', {}, 'SAME_WINDOW')}}",
+              "buttonColor": "#dc2626",
+              "displayName": "Button",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit"
+              ],
+              "topRow": 69,
+              "bottomRow": 73,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 20.03125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 36,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "text": "Cadastrar Movimentação",
+              "isDisabled": false,
+              "key": "0f1lc1hzmw",
+              "isDeprecated": false,
+              "rightColumn": 47,
+              "isDefaultClickDisabled": true,
+              "widgetId": "2q9msmc45t",
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "disabledWhenInvalid": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "SECONDARY",
+              "placement": "CENTER"
+            },
+            {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
+              "widgetName": "Button6",
+              "onClick": "{{navigateTo('Login', {}, 'SAME_WINDOW')}}",
+              "buttonColor": "#dc2626",
+              "displayName": "Button",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit"
+              ],
+              "topRow": 69,
+              "bottomRow": 73,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 57,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "text": "Sair",
+              "isDisabled": false,
+              "key": "gtq0k05154",
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "isDefaultClickDisabled": true,
+              "widgetId": "45d73dum5g",
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "disabledWhenInvalid": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "buttonVariant": "PRIMARY",
               "placement": "CENTER"
             }
@@ -510,7 +746,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async () => {\n  var data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  var tableData = [];\n  for (var i = 0; i < data.length; i++) {\n    var doc = data[i].cpf_coordenador.length > 0 ? data[i].cpf_coordenador : data[i].cnpj_coordenador;\n    tableData.push({\n      id: data[i].id,\n      titulo: data[i].titulo,\n      coordenador: data[i].nome_coordenador,\n      documento: doc,\n      tarefa: ''\n    });\n  }\n  await storeValue(\"ProjetosTable\", tableData);\n}"
+                "async () => {\n  var data = await ObterProjetosAPI.run().catch(res => {\n    showAlert(res);\n  });\n  var tableData = [];\n  console.log(data.length);\n  for (var i = 0; i < data.length; i++) {\n    var doc = data[i].cpf_coordenador.length > 0 ? data[i].cpf_coordenador : data[i].cnpj_coordenador;\n    tableData.push({\n      id: data[i].id,\n      titulo: data[i].titulo,\n      coordenador: data[i].nome_coordenador,\n      documento: doc,\n      tarefa: '',\n      vigenciaInicial: data[i].data_inicial,\n      vigenciaFinal: data[i].data_final\n    });\n  }\n  console.log(tableData);\n  await storeValue(\"ProjetosTable\", tableData);\n}"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -521,7 +757,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async () => {\n  let data_favorecido = await LoadFavorecidosAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados de favorecidos\");\n  });\n  let data_movimentacao = await ObterMovimentacoesAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados de movimentacão\");\n  });\n  let data_rubrica = await ObterRubricasAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados de rubricas\");\n  });\n  let data_tag = await ObterTAGsAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados das TAGs\");\n  });\n  let lista_favorecidos = [];\n  let lista_movimentacao = [];\n  let lista_rubrica = [];\n  let lista_rubrica2 = [];\n  let lista_tag = [];\n  await storeValue('AllFavorecidos', data_favorecido);\n  await storeValue('AllMovimentacoes', data_movimentacao);\n  for (let e of data_favorecido) {\n    var data = e.id + ' - ' + e.nome;\n    lista_favorecidos.push({\n      'label': data,\n      'value': data\n    });\n  }\n  for (let e of data_movimentacao) {\n    lista_movimentacao.push({\n      'label': e['descricao'],\n      'value': e['descricao']\n    });\n  }\n  for (let e of data_rubrica) {\n    lista_rubrica.push({\n      'label': e['descricao'],\n      'value': e['id']\n    });\n    lista_rubrica2.push({\n      'label': e.id + ' - ' + e['descricao'],\n      'value': e.id + ' - ' + e['descricao']\n    });\n  }\n  for (let e of data_tag) {\n    lista_tag.push({\n      'label': e['descricao'],\n      'value': e['id']\n    });\n  }\n  console.log(lista_favorecidos);\n  await storeValue(\"favorecidos\", lista_favorecidos);\n  await storeValue(\"movimentacoes\", lista_movimentacao);\n  await storeValue(\"rubricas\", lista_rubrica);\n  await storeValue(\"rubricas2\", lista_rubrica2);\n  await storeValue(\"tags\", lista_tag);\n  await showAlert(\"Tudo carregado\");\n}"
+                "async () => {\n  let data_favorecido = await LoadFavorecidosAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados de favorecidos\");\n  });\n  let data_movimentacao = await ObterMovimentacoesAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados de movimentacão\");\n  });\n  let data_rubrica = await ObterRubricasAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados de rubricas\");\n  });\n  let data_tag = await ObterTAGsAPI.run().catch(() => {\n    showAlert(\"Erro na requisição dos dados das TAGs\");\n  });\n  let lista_favorecidos = [];\n  let lista_movimentacao = [];\n  let lista_rubrica = [];\n  let lista_rubrica2 = [];\n  let lista_tag = [];\n  await storeValue('AllFavorecidos', data_favorecido);\n  await storeValue('AllMovimentacoes', data_movimentacao);\n  for (let e of data_favorecido) {\n    var data = e.id + ' - ' + e.nome;\n    lista_favorecidos.push({\n      'label': data,\n      'value': data\n    });\n  }\n  for (let e of data_movimentacao) {\n    lista_movimentacao.push({\n      'label': e['descricao'],\n      'value': e['descricao']\n    });\n  }\n  for (let e of data_rubrica) {\n    lista_rubrica.push({\n      'label': e['descricao'],\n      'value': e['id']\n    });\n    lista_rubrica2.push({\n      'label': e.id + ' - ' + e['descricao'],\n      'value': e.id + ' - ' + e['descricao']\n    });\n  }\n  for (let e of data_tag) {\n    lista_tag.push({\n      'label': e['descricao'],\n      'value': e['descricao']\n    });\n  }\n  console.log(lista_favorecidos);\n  await storeValue(\"favorecidos\", lista_favorecidos);\n  await storeValue(\"movimentacoes\", lista_movimentacao);\n  await storeValue(\"rubricas\", lista_rubrica);\n  await storeValue(\"rubricas2\", lista_rubrica2);\n  await storeValue(\"tags\", lista_tag);\n  await showAlert(\"Tudo carregado\");\n}"
               ],
               "timeoutInMillisecond": 10000
             }

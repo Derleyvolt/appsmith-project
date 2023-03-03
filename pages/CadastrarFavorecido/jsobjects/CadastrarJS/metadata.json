@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "CadastrarJS",
+    "pageId": "CadastrarFavorecido",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "CadastrarFavorecido_CadastrarJS",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63b800a704e95b100ff26c7f"
+}

@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "CriarProjetoJS",
+    "pageId": "Projetos",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Projetos_CriarProjetoJS",
+  "deleted": false,
+  "gitSyncId": "637d55b1cbb10813d213d9ed_63c6db241d2df530099f6bd0"
+}
