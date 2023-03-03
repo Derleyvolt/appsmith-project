@@ -439,7 +439,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "horizontalAlignment": "LEFT",
-              "isVisibleSearch": false,
+              "isVisibleSearch": true,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
             },
